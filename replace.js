@@ -11,5 +11,7 @@ let zzinDda = [ "zero", "one", "two", "three", "four", "five", "six", "seven", "
 
 
 zzinDda.forEach((str, zzin) => {
+
   numbers = numbers.replaceAll(str, zzin)
+
 })
