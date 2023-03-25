@@ -14,6 +14,7 @@
 const objArr = [{name: '철수', age: 10}, {name: '영희', age: 10}, {name: '바둑이', age: 2}]
 
 console.log(objArr.every((item)=> item.age>5)); //false (바둑이 탈락!)
+
 console.log(objArr.every((item)=> item.age>1)); //true
 
 
