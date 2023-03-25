@@ -13,5 +13,6 @@
 const objArr = [{name: '철수', age: 10},{name: '영희', age: 10}, {name: '바둑이', age: 2}]
 
 console.log(objArr.some((item)=> item.age>5)); //true
+
 console.log(objArr.some((item)=> item.age>10)); //false (모두 탈락!)
 
