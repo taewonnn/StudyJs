@@ -41,34 +41,16 @@ for (let i = 0; i < 10; i++) {
 
 
 
-// for문 안에서 else
-
-// for문 안에서 if문에 else문을 사용하는 것이 언제 루프를 되돌리는지에 대해 이해하는 것이 중요합니다.
-
-// for문 안에서 if문과 else문을 사용하면,
-// if문이 true이면 if문 안에 있는 코드가 실행되고, else문은 건너뛰고 for문이 다음 반복으로 계속 진행됩니다.
-// 즉, else문은 if문이 false일 때 실행되는 코드이므로, if문이 true일 때 실행되는 코드와는 별개로 실행됩니다.
-
-//   따라서, else문 안에서 특별한 처리를 하지 않는다면, else문은 루프를 되돌리지 않습니다.
-//   만약 else문 안에서 break나 return 문 등으로 루프를 종료시키거나, 다른 반복 제어문(for, while, do-while 등)을 사용한다면, 루프를 되돌릴 수 있습니다.
-//   아래는 else문으로 인해 루프가 되돌아가지 않는 예시 코드입니다.
+// for문 안에서 else return 안되는 이유
+// else return은 안됨!!!
 
 
-for (let i = 0; i < 5; i++) {
-  if (i === 2) {
-    console.log("i is 2");
-  } else {
-    console.log("i is not 2");
-  }
-}
+// for (let i = 0; i < nums.length; i++) {
+//   if (nums[i] === target) {
+//     return nums.indexOf(nums[i]);
+//   } else {
+//     return -1
+//   }
+// }
 
-
-//위 코드는 i가 2일 때 "i is 2"를 출력하고, 그 외에는 "i is not 2"를 출력합니다. 따라서 출력 결과는 아래와 같이 나옵니다.
-
-
-// i is not 2
-// i is not 2
-// i is 2
-// i is not 2
-// i is not 2
 
