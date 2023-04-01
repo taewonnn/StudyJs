@@ -1,4 +1,6 @@
 // 이중 For문
+
+// 각자 두 개로 반복한다!
 let zzol = ['a', 'b', 'c', 'd', 'e'];
 let daram = ['ㄱ', 'ㄴ', 'ㄷ', 'ㄹ'];
 
@@ -7,7 +9,6 @@ for (let i = 0; i <zzol.length; i ++) {
     console.log(zzol[i], daram[j])
   }
 }
-
 
 /*
 a ㄱ
@@ -31,3 +32,5 @@ e ㄴ
 e ㄷ
 e ㄹ
 */
+
+
