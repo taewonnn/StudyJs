@@ -71,3 +71,69 @@ slice(start, end)
 start부터 end까지 자른다.
 원본 배열을 얕은 복사해서 새로운 배열로 반환한다.
 profile
+
+
+
+1. 배열에 요소 추가
+   unshift()
+   배열의 처음에 하나 이상의 요소를 추가하고, 배열의 길이를 반환한다.
+
+const users = ['Charles', 'Cecilia', 'Den'];
+
+const totalUsers = users.unshift('Sherlock', 'John');
+
+
+console.log(totalUsers); // 5 => 배열의 길이를 반환한다.
+console.log(users); // ['Sherlock', 'John', 'Charles', 'Cecilia', 'Den'] => Sherlock과 'John'이 배열의 첫부분에 추가되었다.
+push()
+배열의 마지막에 하나 이상의 요소를 추가하고, 배열의 길이를 반환한다.
+
+const users = ['Charles', 'Cecilia', 'Den'];
+
+const totalUsers = users.push('Sherlock', 'John');
+
+
+console.log(totalUsers); // 5 => 배열의 길이를 반환한다.
+console.log(users); // ['Charles', 'Cecilia', 'Den', 'Sherlock', 'John'] => Sherlock과 'John'이 배열의 마지막에 추가되었다.
+
+
+
+2. 배열의 요소 삭제
+   shift()
+   배열의 첫 요소를 제거하고, 제거된 요소를 반환한다.
+
+const users = [ 'Sherlock', 'John', 'Moriarty' ];
+const newUsers = users.shift();
+
+console.log(newUsers); // 'Sherlock' => 배열의 첫 번째 요소인 'Sherlock'가 반환된다.
+console.log(users); // [ 'John', 'Moriarty' ]
+pop()
+배열의 마지막 요소를 제거하고, 제거된 요소를 반환한다.
+
+const users = ['Sherlock', 'John', 'Moriarty'];
+const newUsers = users.pop();
+
+console.log(newUsers); // 'Moriarty' => 배열의 마지막에 있는 'Moriarty'가 반환된다.
+console.log(users); // [ 'Sherlock', 'John' ]
+cpop()과 shift()로 배열의 요소 모두 제거하기
+shift(), pop()이 제거할 요소가 없는 경우 undefined를 반환하는 특성을 이용하여, 아래와 같이 배열의 요소를 모두 제거 할 수 있다.
+
+let names = ["Andrew", "Edward", "Paul", "Chris" ,"John"];
+
+while( (i = names.pop()) !== undefined ) {
+console.log('제거된요소',i);
+console.log('변경된배열', names)
+}
+
+//console.log()의 결과 값들
+'제거된요소' 'John'
+'변경된배열' [ 'Andrew', 'Edward', 'Paul', 'Chris' ]
+'제거된요소' 'Chris'
+'변경된배열' [ 'Andrew', 'Edward', 'Paul' ]
+'제거된요소' 'Paul'
+'변경된배열' [ 'Andrew', 'Edward' ]
+'제거된요소' 'Edward'
+'변경된배열' [ 'Andrew' ]
+'제거된요소' 'Andrew'
+'변경된배열' []
+```
