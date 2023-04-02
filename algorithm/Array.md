@@ -37,3 +37,37 @@ let myVar1 = arr.join();      // '1,2,3,4' 기본 구분자로 연결
 let myVar2 = arr.join(',');  // '1,2,3,4'
 let myVar3 = arr.join('+'); // '1+2+3+4'
 let myVar4 = arr.join('');    // 1234'
+
+
+
+
+## Array.splice()
+
+배열의 요소를 삭제, 교체하거나 새로운 요소를 추가하여 기존 배열을 변경한다. 그리고 변경된 배열을 반환한다.
+
+배열 중간의 요소 삭제
+const totalUsers = users.splice(1,1); //1번 인덱스 요소부터 1개 삭제
+console.log(totalUsers); // [ 'Cecilia' ] => 삭제된 요소 반환
+console.log(users); // [ 'Charles', 'Den' ] => 변경된 배열 반환
+
+배열의 중간에 요소 추가
+const totalUsers = users.splice(1,0, 'Microft'); //1번 인덱스 자리에 'Microft' 추가
+console.log(totalUsers); // [] => 빈배열 반환, 삭제된 요소 없음
+console.log(users); // [ 'Charles', 'Microft', 'Cecilia', 'Den' ] => 변경된 배열 반환
+
+
+
+## slice()와 splice() 간단비교
+
+splice(start, deleteCount, addItem)
+
+start부터 deleteCount개 삭제한다.
+addItem을 추가한다.
+원본 배열을 수정해서 반환한다.
+
+
+slice(start, end)
+
+start부터 end까지 자른다.
+원본 배열을 얕은 복사해서 새로운 배열로 반환한다.
+profile
