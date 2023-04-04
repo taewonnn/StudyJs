@@ -170,3 +170,18 @@ arr1.push(arr2);
 
 
 
+## 배열 중복 제거
+
+1. set() 
+
+
+2. filter(), indexOf() 
+
+filter() 함수는 filter() 함수 안의 callback 함수에 정의한 부분에 대해 true 로 반환되는 요소만을 배열로 반환합니다.
+그리고, indexOf()는 입력 값이 해당 배열에서 가장 처음 나타나는 index를 알려줍니다.
+
+const array = ['C', 'A', 'B', 'A', 'C', 'D', 'C', 'C', 'E', 'D'];
+console.log(array);	// ['C', 'A', 'B', 'A', 'C', 'D', 'C', 'C', 'E', 'D']
+
+let result = array.filter((v, i) => array.indexOf(v) === i);
+console.log(result);	// ['C', 'A', 'B', 'D', 'E']
