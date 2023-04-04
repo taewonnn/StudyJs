@@ -40,3 +40,5 @@ let sum = numbers.reduce((acc, cur) => acc + cur)
 const numbers = [4, 3, 2, 1];
 let sum = numbers.reduce((accumulator, current) => accumulator + current, 0);
 console.log(sum);
+
+
