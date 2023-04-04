@@ -185,3 +185,15 @@ console.log(array);	// ['C', 'A', 'B', 'A', 'C', 'D', 'C', 'C', 'E', 'D']
 
 let result = array.filter((v, i) => array.indexOf(v) === i);
 console.log(result);	// ['C', 'A', 'B', 'D', 'E']
+
+
+3. reduce(), includes() 
+
+reduce()의 두번째 인자 값으로 결과값을 담을 새로운 빈 배열 하나를 만들고,
+reduce()의 첫번째 인자로 callback 안에서 callback 함수의 두번째 인자(v)를 새로 만든 배열(ac)에 includes()를 사용하여
+새로 만든 배열에 존재하지 않으면 해당 값을 삽입한 배열을 반환하고,
+존재하면 해당 값을 삽입하지 않고 반환하는 방식으로 배열을 만들어 만들어진 최종 값을 반환합니다.
+
+const array = ['c', 'a', 'b', 'a', 'c']
+
+let result = array.reduce((ac, v) => ac.includes(v) ? ac : [...ac, v], []);
