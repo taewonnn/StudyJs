@@ -137,3 +137,36 @@ console.log('변경된배열', names)
 '제거된요소' 'Andrew'
 '변경된배열' []
 ```
+
+
+## 배열 합치기
+
+1. concat()
+파라미터로 받은 배열이나 값들을 기존의 배열에 합쳐서, 새로운 배열을 만들어서 리턴합니다.
+
+const arr = [1, 2, 3];
+const newArr = arr.concat('a', ['b', 'c'], 'abc');
+
+
+2. spread operator(전개 연산자)
+
+onst arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const arr3 = [7, 8, 9];
+
+const newArr = [
+  ...arr1,
+  ...arr2,
+  ...arr3
+];
+
+
+3. push()
+
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+
+arr1.push(arr2);
+
+
+
