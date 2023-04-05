@@ -42,3 +42,21 @@ let sum = numbers.reduce((accumulator, current) => accumulator + current, 0);
 console.log(sum);
 
 
+3. 두 개의 인자 추가
+
+   4개의 인자 + 1개의 초기값
+   acc accumulator : 누산기, 누적되는 값, 최종적으로 출력되는 값
+   cur current : 현재 돌고 있는 요소
+   idx index : 배열 요소의 순서 (optional)
+   arr array (또는 src source) : 현재 배열, 원본 배열 (optional)
+   initialValue : acc의 초기값 (optional)
+
+
+const avg = numbers.reduce((acc, cur, index, arr) => {
+if (index === arr.length - 1) { // index가 마지막일 때
+return (acc + cur) / arr.length; // cur - 4
+}
+return acc + cur; // cur - 1, 2, 3
+}, 0);
+ㅤ
+console.log("avg", avg);
