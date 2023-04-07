@@ -29,3 +29,24 @@ console.log(
   arr.includes('abc'),
   arr.includes(true),
 );
+
+
+
+// push, unshift - 배열에 값을 추가
+
+// a. push - 값을 뒤에 추가
+const arr = [1, 2, 3];
+const x = arr.push(4);
+
+console.log(x, arr);
+
+// b. unshift - 값을 앞에 추가
+const arr = [5, 6, 7];
+const x = arr.unshift(4);
+
+console.log(x, arr);
+
+
+
+
+
