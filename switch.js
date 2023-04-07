@@ -47,7 +47,6 @@ switch (fingersOut) {
 }
 
 
-// break;들을 제거하고 실행해볼 것
 // default: 맨 아래 작성, break되지 않은 이상 무조건 실행
 
 
