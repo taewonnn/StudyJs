@@ -12,7 +12,6 @@
 // 객체와 배열의 for문
 
 // 객체 - for in
-
 const lunch = {
   name: '라면',
   taste: '매운맛',
@@ -37,7 +36,6 @@ for (const daram in lunch) {
 
 
 // 배열 -  for of
-
 const list = [1, '가나다', false, null];
 
 for (const item of list) {
