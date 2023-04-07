@@ -25,3 +25,30 @@
 
 // switch ()의 괄호 사이에는 자유롭게 데이터가 올 수 있습니다.
 // 하지만 case 뒤에는 변수, 조건식 등을 사용할 수 없습니다. 아래 예제는 switch 조건문이 작동되지 않습니다.
+
+
+
+
+const fingersOut = 2;
+
+switch (fingersOut) {
+  // 순서 상관없음
+  case 2:
+    console.log('가위');
+    break;
+  case 0:
+    console.log('바위');
+    break;
+  case 5:
+    console.log('보');
+    break;
+  default:
+    console.log('무효');
+}
+
+
+// break;들을 제거하고 실행해볼 것
+// default: 맨 아래 작성, break되지 않은 이상 무조건 실행
+
+
+
