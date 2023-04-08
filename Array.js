@@ -55,7 +55,27 @@ console.log(x, arr);
 
 
 
+// pop, shift - 배열에서 값을 제거하여 반환
+
+
+// pop - 값을 뒤에서 제거하여 반환
+const arr = [1, 2, 3, 4, 5];
+const x = arr.pop();
+
+console.log(x, arr);
+
+const y = arr.pop();
+
+console.log(y, arr);
 
 
 
+// b. shift - 값을 앞에서 제거하여 반환
+const arr = [1, 2, 3, 4, 5];
+const x = arr.shift();
 
+console.log(x, arr);
+
+const y = arr.shift();
+
+console.log(y, arr);
