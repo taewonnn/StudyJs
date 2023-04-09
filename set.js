@@ -43,3 +43,44 @@ console.log(
 );
 
 console.log(set2);
+
+
+
+// set.add()
+// add 메서드는 결과 셋을 반환
+const set3 = set2.add(2);
+
+console.log(set3);
+
+
+// 💡 메서드 체이닝을 할 수 있다는 의미
+set2
+  .add(3)
+  .add(4)
+  .add(5)
+
+// 참조형이므로 둘이 같은 Set을 가리킴
+console.log(set2, set3);
+
+
+// set.size()
+
+// size 프로퍼티 - 요소의 개수
+console.log(
+  set2.size
+);
+
+// keys, values, entries 메서드 - 값 / 값 / [값, 값] 반환
+// key를 value와 같이 취급
+console.log(
+  set2.keys(),
+  set2.values(),
+  set2.entries()
+);
+
+
+// set.clear()
+// clear 메서드 - 모든 요소들을 삭제
+set2.clear();
+
+console.log(set2, set3);
