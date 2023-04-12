@@ -26,3 +26,24 @@ fetch('https://showcases.yalco.kr/javascript/mockserver/race-result')
 // 반환되는 결과 ( response )
 // 요청의 결과에 대한 정보들을 담은 객체
 // json 메서드 - 결과의 body로 받은 텍스트를 JSON 객체로 변환하여 반환
+
+
+
+
+
+
+// 연속 fetching 예제
+
+// 1. 경기 결과를 받아온 뒤 1등 주자 선택
+// 2. 해당 주자의 상세정보 받아온 뒤 학교 코드 추출
+// 3. 해당 학교의 정보 받아오기
+
+
+
+
+// 1. promise
+
+
+
+
+// 2. async / await
