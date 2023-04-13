@@ -54,3 +54,23 @@ for (let i = 0; i < 10; i++) {
 // }
 
 
+// contunue / break
+
+
+// continue - 한 루프를 건너뜀
+for (let i = 1; i <= 10; i++) {
+  if (i % 3 === 0) continue;
+  console.log(i);
+}
+
+console.log('for 루프 종료');
+
+
+
+// break - 블록을 종료하고 빠져나옴
+for (let i = 1; i <= 10; i++) {
+  if (i === 5) break;
+  console.log(i);
+}
+
+console.log('for 루프 종료');
