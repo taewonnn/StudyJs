@@ -18,3 +18,54 @@ console.log(chain1, chain1.introduce());
 console.log(chain2, chain2.introduce());
 console.log(chain3, chain3.introduce());
 
+// 💡 Syntactic Sugar - 문법을 보다 읽기 쉽게 만드는 것
+// 자바 등 타 언어에 익숙한 사람들을 위해 생성자 함수, 프로로타입 기반인
+// 자바스크립트 문법 타 언어의 클래스와 비슷한 문법으로 포장
+
+
+// II. constructor 메서드
+
+// 인스턴스 생성시 인자를 받아 프로퍼티를 초기화함
+// 클래스에 하나만 있을 수 있음 - 초과시 오류 발생
+// 다른 메서드 이름을 쓸 수 없음
+// 기본값 사용 가능
+// 필요없을 (인자가 없을 때 등) 시 생략 가능
+// ⚠️ 값을 반환하지 말 것! 생성자 함수처럼 암묵적으로 this 반환
+
+class Person {
+  constructor (name, age, married = false) {
+    this.name = name;
+    this.age = age;
+    this.married = married;
+  }
+}
+
+const person1 = new Person('박영희', 30, true);
+const person2 = new Person('오동수', 18);
+console.log(person1, person2);
+
+
+
+// III. 클래스의 메서드
+
+class Dog {
+  bark () {
+    return '멍멍';
+  }
+}
+const badugi = new Dog();
+console.log(badugi, badugi.bark());
+
+
+// 💡 생성자 함수에 넣은 함수의 차이 - 프로토타입으로 들어감
+
+function Dog2 () {
+  this.bark = function () {
+    return '멍멍';
+  }
+}
+const badugi = new Dog2();
+console.log(badugi, badugi.bark());
+
+
+
