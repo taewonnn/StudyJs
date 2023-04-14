@@ -44,6 +44,26 @@ console.log(add(4, 5));
 
 
 
+// 함수 선언 방식
+
+function add (x, y) {
+  return x + y;
+}
+
+// 화살표 함수
+
+// 한 줄 안에 값만 반환시
+const mult = (x, y) => x * y;
+
+console.log(mult(2, 7));
 
 
 
+// 두 줄 이상의 작업이 있을 시
+const mult = (x, y) => {
+  console.log(`${x}와 ${y}를 곱합니다.`);
+  console.log(`결과는 ${x * y}입니다.`);
+  return x * y;
+};
+
+console.log(mult(2, 7));
