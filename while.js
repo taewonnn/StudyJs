@@ -21,3 +21,16 @@ while (true) {
 // 1 ~ 5 출력
 
 
+
+
+// do while
+// 일단 수행하고 조건을 평가
+
+
+let x = 12;
+
+do {
+  console.log(x++);
+} while (x < 10);
+
+
