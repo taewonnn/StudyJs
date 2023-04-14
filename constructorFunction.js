@@ -54,3 +54,25 @@ console.log(chain3, chain3.introduce());
 // 생성자 함수는 new 연산자와 함께 사용
 // 암묵적으로 this 반환
 // 생성자 함수에서는 메서드 정의 불가 - 객체 리터럴과 클래스에서는 가능
+
+
+
+// II. 생성자 함수로 만들어진 객체
+
+// 1. 프로토타입 prototype - 자바스크립트 객체지향의 중심
+
+function YalcoChicken (name, no) {
+  this.name = name;
+  this.no = no;
+  this.introduce = function () {
+    return `안녕하세요, ${this.no}호 ${this.name}점입니다!`;
+  }
+}
+
+const chain1 = new YalcoChicken('판교', 3);
+console.log(chain1);
+
+
+
+
+
