@@ -16,3 +16,46 @@ console.log(typeof addNumbers);
 
 
 
+
+// I. 할당
+
+function isOddNum (number) {
+  console.log(
+    (number % 2 ? '홀' : '짝')
+    + '수입니다.'
+  );
+  return number % 2 ? true : false;
+};
+
+const checkIfOdd = isOddNum; // 뒤에 괄호 없음 유의
+
+console.log(checkIfOdd(23));
+
+
+
+
+
+// II. 인자로 전달
+
+// 함수가 다른 함수를 인자로 전달받음
+// 전달받는 함수 : 고차 함수 highter-order function
+// 전달되는 함수 : 콜백 함수 callback function
+
+
+let list = [1, 2, 3, 4, 5];
+
+function doInArray (array, func) {
+  for (item of array) {
+    func(item);
+  }
+}
+
+// console.log - console이란 객체에서 log란 키에 할당된 함수
+doInArray(list, console.log);
+
+
+
+
+
+
+
