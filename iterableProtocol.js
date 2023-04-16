@@ -23,3 +23,24 @@ console.log(
 
 
 // 이터레이터 iterator
+// next 메서드를 통해 이터러블을 순회하며 값을 반환
+
+const arr = [1, 'A', true, null, {x: 1, y: 2 }];
+const arrIterator = arr[Symbol.iterator]();
+
+// 펼쳐서 메서드 살펴볼 것
+console.log(arrIterator);
+
+
+// 이터레이터 프로토콜 iterator protocol
+// next 메서드의 반환 객체 내 요소
+
+// value - 해당 차례에 반환할 값
+// done - 순회 종료 여부 ( 마지막 값 반환 다음 차례부터 )
+
+
+
+
+
+
+
