@@ -111,6 +111,60 @@ console.log("코드 끝")
 
 
 
+## JS Engine
+
+동기 방식
+
+
+```js
+function one () {
+  return 1;
+};
+
+function two () {
+  return one() + 1;
+}
+
+function three () {
+  return two() + 1;
+};
+
+console.log(three());
+```
+
+
+비동기 방식
+
+```js
+function asyncAdd (a, b, cb) {
+  setTimeout(() => {
+    const res = a + b;
+    cb(res);
+  }, 3000)
+};
+
+asyncAdd(1, 2, (res) => {
+  console.log('Result : ', res)
+})
+```
+
+
+1. Main Context 실행
+2. asyncAdd 함수 호출  -> callstack에 추가 
+3. setTimeOut()  비동기 함수 => 3초를 기다려야 하는데, 이걸 web APIS로 넘겨버린다! 여기에서 3초를 기다려
+4. asyncAdd 함수 종료하여 callstack 종료
+5. Web APIs에서 3초 뒤 callback queue로 옮겨진 이후 call stack에 옮겨짐
+6. ...
+
+
+
+
+
+
+
+
+
+
 
 
 
