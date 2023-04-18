@@ -66,6 +66,48 @@ console.log("코드 끝")
 
 ```
 
+```js
+function taskA (a, b, cb) {
+  setTimeout(() => {
+    const res = a + b;
+    cb(res);
+  }, 3000)
+}
+
+function taskB(a, cb) {
+  setTimeout(() => {
+    const res = a * 2;
+    cb(res)
+  }, 1000)
+}
+
+function taskC(a, cb) {
+  setTimeout(() => {
+    const res = a * -1;
+    cb(res);
+  },  2000)
+} 
+
+taskA(3, 4, () => {
+  console.log('A task result:', res)
+});
+
+taskB(7, (res) => {
+  console.log('B task result :', res)
+})
+
+taskC(14, (res) => {
+  console.log('C task result :', res)
+})
+
+console.log("코드 끝") 
+
+// 코드 끝
+// B Task : 14
+// C Task : -14
+// A Task : 7
+
+```
 
 
 
