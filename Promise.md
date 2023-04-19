@@ -14,6 +14,8 @@
 
 ```js
 
+let url = '~~~~'
+
 function getData () {
   // promise 사용 방법
   return new Promise(function(resolve, reject) {
