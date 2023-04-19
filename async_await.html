@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Async & await</title>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    let ulr = "https://~~"
+
+    function getData() {
+      // Promise  => 다 끝날 때까지 기다릴게 약속!
+      return new Promise(function (resolve, reject) {
+        axios.get(url).then(function (response) {
+          console.log(response.data);
+          resolve(response.data);
+        })
+      })
+    }
+
+    let total = 0;
+
+    getData().then(function (data) {
+      data.forEach(a => {
+        total += data.price;
+      })
+    })
+
+
+    // Async & await   => 비동기 통신을 기다려줄게!!
+    async function getData2() {
+      return (await axios.get(url)).data;
+    }
+
+
+
+
+  </script>
+</body>
+</html>
