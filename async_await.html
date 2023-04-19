@@ -10,31 +10,42 @@
 <body>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
-    let ulr = "https://~~"
+    // let ulr = "https://~~"
+    //
+    // function getData() {
+    //   // Promise  => 다 끝날 때까지 기다릴게 약속!
+    //   return new Promise(function (resolve, reject) {
+    //     axios.get(url).then(function (response) {
+    //       console.log(response.data);
+    //       resolve(response.data);
+    //     })
+    //   })
+    // }
+    //
+    // let total = 0;
+    //
+    // getData().then(function (data) {
+    //   data.forEach(a => {
+    //     total += data.price;
+    //   })
+    // })
 
-    function getData() {
-      // Promise  => 다 끝날 때까지 기다릴게 약속!
-      return new Promise(function (resolve, reject) {
-        axios.get(url).then(function (response) {
-          console.log(response.data);
-          resolve(response.data);
-        })
-      })
+
+    // Async & await   => 비동기 통신을 기다려줄게!!
+    let ulr = "https://~~"
+    async function getData2() {
+      return (await axios.get(url)).data;
     }
+
+    let data = getData2();
 
     let total = 0;
 
-    getData().then(function (data) {
+    getData2().then(function (data) {
       data.forEach(a => {
         total += data.price;
       })
     })
-
-
-    // Async & await   => 비동기 통신을 기다려줄게!!
-    async function getData2() {
-      return (await axios.get(url)).data;
-    }
 
 
 
