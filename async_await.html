@@ -37,15 +37,21 @@
       return (await axios.get(url)).data;
     }
 
-    let data = getData2();
+    async function calculateSum() {
+      let data = await getData2();
 
-    let total = 0;
+      let total = 0;
 
-    getData2().then(function (data) {
       data.forEach(a => {
         total += data.price;
       })
-    })
+
+      console.log(total);
+    }
+
+    calculateSum();
+
+
 
 
 
