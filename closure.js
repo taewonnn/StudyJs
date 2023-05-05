@@ -33,3 +33,30 @@ function createCounter (start) {
 const count = createCounter(10);
 
 // 단지 값을 복사해서 갖는 것이 아니라, 해당 값이 저장되는 외부 환경 자체가 유지됨
+
+
+
+
+
+
+
+
+
+
+
+
+const text = 'hello';
+function func() {
+  console.log(text);
+}
+func();
+
+function outer() {
+  const x = 0;
+  function inner() {
+    console.log(`inside inner: ${x}`);
+  }
+  return inner;
+}
+const func1 = outer();
+func1();
