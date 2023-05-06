@@ -3,12 +3,11 @@ const fruits = ["🍌", "🍎", "🍇", "🍌", "🍎", "🍑"];
 //  ['🍌', '🍎', '🍇', '🍑']
 
 
-
-
 function removeDuplication(array) {
   return [...new Set(array)];
 }
 console.log(removeDuplication(fruits));
+
 
 
 
