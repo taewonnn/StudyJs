@@ -95,3 +95,8 @@ class Counter {
     this.#value++;
   };
 }
+
+const counter = new Counter(0);
+counter.increment(); // 1
+counter.increment(); // 2
+console.log(counter.value);
