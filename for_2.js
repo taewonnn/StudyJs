@@ -74,3 +74,13 @@ for (let i = 1; i <= 10; i++) {
 }
 
 console.log('for 루프 종료');
+
+
+
+// 퀴즈!
+// 1. 문자열의 모든 캐릭터를 하나씩 출력하라
+const text = "Hello World!";
+
+for (let i = 0; i < text.length; i++) {
+  console.log(text[i]);
+}
