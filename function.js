@@ -88,3 +88,13 @@ function iterate(max, action) {
     action(i);
   }
 }
+
+function log(num) {
+  console.log(num);
+}
+
+function doubleAndLog(num) {
+  console.log(num * 2);
+}
+iterate(3, (num) => console.log(num));
+iterate(3, (num) => console.log(num * 2));
