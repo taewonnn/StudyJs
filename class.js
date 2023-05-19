@@ -111,3 +111,20 @@ console.log(counter.value);
 // 매달 직원들의 정보를 이용해서 한달 월급을 계산할 수 있다
 // 정직원은 시간당 10000원
 // 파트타임 직원은 시간당 8000원
+
+
+
+class Employee {
+  constructor(name, department, hoursPerMonth, payRate) {
+    this.name = name;
+    this.department = department;
+    this.hoursPerMonth = hoursPerMonth;
+    this.payRate = payRate;
+  }
+  calculatePay() {
+    return this.hoursPerMonth * this.payRate;
+  }
+}
+
+
+
