@@ -119,3 +119,24 @@ function upto5 (x) {
 upto5(1);
 upto5(3);
 upto5(7);
+
+
+// 불변성
+
+let x = 1;
+let y = {
+  name: '홍길동',
+  age: 15
+}
+let z = [1, 2, 3];
+
+function changeValue (a, b, c) {
+  a++;
+  b.name = '전우치';
+  b.age++;
+  c[0]++;
+
+  console.log(a, b, c);
+}
+
+changeValue(x, y, z);
