@@ -17,6 +17,23 @@ setTimeout(function() {}, 1000)
 
 
 
+//
+
+function first (param) {
+  param()
+}
+
+function second () {
+
+}
+
+first(second)
+// first 함수안의 코드 실행해주세요! 근데 파라미터에 second 집어넣어서요!
+
+
+
+
+
 
 function a() {
   for (let i = 0; i < 1000000000000000; i++);
