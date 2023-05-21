@@ -78,3 +78,16 @@ class Tiger extends Animal {
   }
 }
 
+
+const dog1 = new Dog('뭉치', '🐶');
+const tiger1 = new Tiger('어흥', '🐯');
+dog1.printName();
+tiger1.printName();
+dog1.play();
+tiger1.hunt();
+
+console.log(dog1 instanceof Dog);
+console.log(dog1 instanceof Animal);
+console.log(dog1 instanceof Tiger);
+console.log(tiger1 instanceof Tiger);
+
