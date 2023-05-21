@@ -54,8 +54,8 @@ console.log(student);
 
 
 // quiz
-// 클래스를 베이스로한 객체지향프로그래밍
 
+// 클래스를 베이스로한 객체지향프로그래밍!
 
 class Animal {
   constructor(name, emoji) {
