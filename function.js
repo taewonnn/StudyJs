@@ -102,3 +102,20 @@ iterate(3, (num) => console.log(num * 2));
 setTimeout(() => {
   console.log('3초뒤 이 함수가 실행될거예요');
 }, 3000);
+
+
+
+// 재귀 함수
+
+function upto5 (x) {
+  console.log(x);
+  if (x < 5) {
+    upto5(x + 1);
+  } else {
+    console.log('- - -');
+  };
+}
+
+upto5(1);
+upto5(3);
+upto5(7);
