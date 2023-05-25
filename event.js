@@ -86,3 +86,17 @@ $button2.addEventListener('mouseenter', () => {
     if (!countdown) clearInterval(interval);
   }, 1000);
 });
+
+
+
+// focus, blur 이벤트
+
+const $input1 = document.querySelector('#input1');
+
+$input1.addEventListener('focus', () => {
+  $input1.setAttribute('placeHolder', '어! 왜, 뭐 입력하시게요?');
+});
+
+$input1.addEventListener('blur', () => {
+  $input1.setAttribute('placeHolder', '그냥 가시네...');
+});
