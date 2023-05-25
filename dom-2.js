@@ -24,4 +24,10 @@ console.log($soldOuts);
 document.getElementById('sweets');
 
 
-//
+// querySelector, querySelectorAll
+document.querySelector('section');
+
+// 💡 NodeList 반환 (HTMLCollection보다 다양한 타입 담음)
+document.querySelectorAll('section');
+
+document.querySelector('.plant > ul > .soldout');
