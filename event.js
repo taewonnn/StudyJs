@@ -118,3 +118,27 @@ $input2.addEventListener('keyup', (e) => {
 
   e.target.value = '';
 });
+
+
+// change 이벤트
+// 인풋 요소의 값이 바뀔 때
+
+$input2.addEventListener('keyup', (e) => {
+  if (e.key !== 'Enter') return;
+
+  $newLi = document.createElement('li');
+  $newLi.textContent = e.target.value;
+  $ul.appendChild($newLi);
+
+  e.target.value = '';
+});
+
+document.querySelector('#grade')
+  .addEventListener('change', () => {
+    fillRaceTable();
+  });
+
+document.querySelector('#sort')
+  .addEventListener('change', () => {
+    fillRaceTable();
+  });
