@@ -100,3 +100,21 @@ $input1.addEventListener('focus', () => {
 $input1.addEventListener('blur', () => {
   $input1.setAttribute('placeHolder', '그냥 가시네...');
 });
+
+
+
+// keyup 이벤트
+// 키보드 키가 눌린 후 올라올 때
+
+const $ul = document.querySelector('ul');
+const $input2 = document.querySelector('#input2');
+
+$input2.addEventListener('keyup', (e) => {
+  if (e.key !== 'Enter') return;
+
+  $newLi = document.createElement('li');
+  $newLi.textContent = e.target.value;
+  $ul.appendChild($newLi);
+
+  e.target.value = '';
+});
