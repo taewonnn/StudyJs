@@ -47,3 +47,42 @@ $button2.addEventListener('mouseenter', () => {
       .textContent = '🔥🔥🔥🔥🔥🔥🔥🔥🔥';
   }, 5000);
 });
+
+
+
+// 같은 이벤트에 대해 여러 핸들러 등록 가능
+$button2.addEventListener('mouseenter', () => {
+  if (interval) clearInterval(interval);
+
+  countdown = 5;
+
+  $button2
+    .lastElementChild
+    .textContent = countdown;
+
+  interval = setInterval(() => {
+    $button2
+      .lastElementChild
+      .textContent = --countdown;
+
+    if (!countdown) clearInterval(interval);
+  }, 1000);
+});
+
+$button2.addEventListener('mouseenter', () => {
+  if (interval) clearInterval(interval);
+
+  countdown = 5;
+
+  $button2
+    .lastElementChild
+    .textContent = countdown;
+
+  interval = setInterval(() => {
+    $button2
+      .lastElementChild
+      .textContent = --countdown;
+
+    if (!countdown) clearInterval(interval);
+  }, 1000);
+});
