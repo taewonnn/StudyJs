@@ -18,3 +18,10 @@ const $soldOuts = document.getElementsByClassName('soldout');
 
 console.log($plants);
 console.log($soldOuts);
+
+
+// getElementById - 아이디로 선택
+document.getElementById('sweets');
+
+
+//
