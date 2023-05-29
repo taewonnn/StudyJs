@@ -48,3 +48,10 @@ function match(input, search) {
   return input.filter((item) => search.includes(item));
 }
 console.log(match(['🍌', '🥝', '🍇'], ['🍌', '🍓', '🍇', '🍓']));
+
+
+// 퀴즈 4
+// 5이상(보다 큰)의 숫자들의 평균
+
+function result2 = nums
+  .filter((num) => num >5 )
