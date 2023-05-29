@@ -26,4 +26,12 @@ function count(array, item) {
   return array.filter((v) => v === item).length;
 }
 
+function count1(array, item) {
+  return array.reduce((count, value) => {})
+  if (value === item) {
+    count ++;
+  }
+  return count;
+}
+
 console.log(count(['🍌', '🥝', '🍇', '🥝'], '🥝'));
