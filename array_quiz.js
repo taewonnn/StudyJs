@@ -55,5 +55,7 @@ console.log(match(['🍌', '🥝', '🍇'], ['🍌', '🍓', '🍇', '🍓']));
 
 const nums = [3, 16, 5, 25, 4, 34, 21];
 
-function result2 = nums
-  .filter((num) => num >5 )
+const result2 = nums
+  .filter((num) => num > 5) //
+  .reduce((avg, num) => avg + num / array.length, 0);
+console.log(result2);
