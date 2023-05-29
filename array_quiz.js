@@ -4,6 +4,6 @@
 // output: [ '🍌', '🥝', '🍇', '🥝' ]
 
 
-function replace () {
-  return
+function replace (array, from, to) {
+  return array.map((i) => (i === from ? to: i))
 }
