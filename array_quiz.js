@@ -44,4 +44,7 @@ console.log(count(['🍌', '🥝', '🍇', '🥝'], '🥝'));
 // input: ['🍌', '🥝', '🍇'],  ['🍌', '🍓', '🍇', '🍓']
 // output: [ '🍌', '🍇' ]
 
-
+function match(input, search) {
+  return input.filter((item) => search.includes(item));
+}
+console.log(match(['🍌', '🥝', '🍇'], ['🍌', '🍓', '🍇', '🍓']));
