@@ -7,3 +7,8 @@
 function replace (array, from, to) {
   return array.map((i) => (i === from ? to: i))
 }
+
+
+const array = ['🍌', '🍓', '🍇', '🍓'];
+const result = replace(array, '🍓', '🥝');
+console.log(result);
