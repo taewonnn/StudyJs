@@ -4,7 +4,6 @@
 // 용도 : 순차적으로 실행하고 싶을 때 사용!
 
 document.querySelector('.button').addEventListener('click', function () {
-
 });
 
 // addEventListener는 함수인데, 함수 안에 또다른 함수를 넣는다! -> 콜백함수
@@ -17,14 +16,13 @@ setTimeout(function() {}, 1000)
 
 
 
-//
+
 
 function first (param) {
   param()
 }
 
 function second () {
-
 }
 
 first(second)
