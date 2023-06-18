@@ -18,10 +18,10 @@ console.log(chain1, chain1.introduce());
 console.log(chain2, chain2.introduce());
 console.log(chain3, chain3.introduce());
 
-// 💡 Syntactic Sugar - 문법을 보다 읽기 쉽게 만드는 것
-// 자바 등 타 언어에 익숙한 사람들을 위해 생성자 함수, 프로로타입 기반인
-// 자바스크립트 문법 타 언어의 클래스와 비슷한 문법으로 포장
 
+
+
+// 💡 Syntactic Sugar - 문법을 보다 읽기 쉽게 만드는 것
 
 // II. constructor 메서드
 
@@ -30,6 +30,7 @@ console.log(chain3, chain3.introduce());
 // 다른 메서드 이름을 쓸 수 없음
 // 기본값 사용 가능
 // 필요없을 (인자가 없을 때 등) 시 생략 가능
+
 // ⚠️ 값을 반환하지 말 것! 생성자 함수처럼 암묵적으로 this 반환
 
 class Person {
