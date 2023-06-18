@@ -2,7 +2,6 @@
 
 
 // getElementsByTagName - 태그명으로 선택
-
 const $sections = document.getElementsByTagName('section');
 const $listItems = document.getElementsByTagName('li');
 
