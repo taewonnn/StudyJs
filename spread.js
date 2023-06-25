@@ -3,14 +3,17 @@
 // 순회가 가능한 모든 것들은 촤르르르륵 펼쳐 질 수 있다
 
 
+
 // func(...iterable)
 // [...iterable]
 // { ...obj }
 
 
+
 function add(a, b, c) {
   return a + b + c;
 }
+
 
 const nums = [1, 2, 3];
 console.log(add(...nums));
