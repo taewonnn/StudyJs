@@ -6,7 +6,9 @@ console.log(
   Array.isArray([1, 2, 3]),
   Array.isArray('123'),
   Array.isArray('123'.split(''))
+
 );
+
 
 
 // at - 주어진 인자를 인덱스로 값을 반환
