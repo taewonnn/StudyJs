@@ -46,9 +46,7 @@ const person2 = new Person('오동수', 18);
 console.log(person1, person2);
 
 
-
 // III. 클래스의 메서드
-
 class Dog {
   bark () {
     return '멍멍';
@@ -72,7 +70,6 @@ console.log(badugi, badugi.bark());
 
 
 // quiz
-
 // 카운터를 만들기
 // 0 이상의 값으로 초기화 한 뒤 하나씩 숫자를 증가할 수 있는 카운터를 만들기
 // Counter 클래스 만들기
