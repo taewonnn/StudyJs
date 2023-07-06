@@ -10,7 +10,14 @@
 // 3가지 상태가 있다
 
 function runInDelay(seconds) {
-  return new Promise();
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if(!seconds || seconds < 0) {
+        reject(new Error('seconds가 0보다 작음'))
+      }
+      resolve();
+    }, seconds * 1000)
+  } );
 }
 
 runInDelay(2)
