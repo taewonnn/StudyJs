@@ -4,6 +4,23 @@
 // 마치 동기 코드처럼 직관적으로 코딩을 할 수 있음
 
 
+async function fetchFruits() {
+  const banana = await getBanana();
+  const apple = await getApple();
+  return [banana, apple];
+
+  // return getBanana()
+  //   .then((banana) =>
+  //     getApple()
+  //       .then((apple) => [banana, apple])
+  //   );
+}
+
+fetchFruits() //
+  .then(fruits => console.log(fruits));
+
+
+
 
 function getMult10Promise (number) {
   return new Promise((resolve, reject) => {
