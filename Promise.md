@@ -6,6 +6,20 @@
 // 서버로 데이터 요청 코드 ~ 
 
 // 그 이후 데이터 관련해서 더하기 함수 실행 코드 ~
+
+// 3가지 상태가 있다
+
+function runInDelay(seconds) {
+  return new Promise();
+}
+
+runInDelay(2)
+  .then(// 필요한 일 수행)
+  .catch(// 에러를 처리)
+  .finally(// 최종적으로 할 일)
+
+
+
 ```
 
 => 서버로 데이터를 받아올 때, 오래걸리거나 하면 함수가 실행이 안돼!
