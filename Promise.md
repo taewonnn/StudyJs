@@ -16,8 +16,15 @@ function runInDelay(seconds) {
 runInDelay(2)
   .then(// 필요한 일 수행)
   .catch(// 에러를 처리)
-  .finally(// 최종적으로 할 일)
+  .finally(// 최종적으로 무조건 호출!)
 
+
+runInDelay(2)
+  .then(() => {
+    console.log('타이머 완료!')
+  })
+  .catch((error) => console.log(error))
+  .finally(()=> console.log('끝났다!'))
 
 
 ```
