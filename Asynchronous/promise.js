@@ -12,3 +12,10 @@
 // finally -
 
 
+function runInDelay( seconds) {
+  // promise object를 return
+  return new Promise();
+
+
+
+}
