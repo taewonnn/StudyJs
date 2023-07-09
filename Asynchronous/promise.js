@@ -16,6 +16,9 @@ function runInDelay( seconds) {
   // promise object를 return
   return new Promise();
 
-
+  runInDelay(2)
+    .then(필요한 일 수행)
+    .catch(에러를 처리)
+    .finally(최종적으로 무조건 호출)
 
 }
