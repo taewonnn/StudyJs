@@ -7,7 +7,6 @@
 // ⭐ 자바스크립트의 모든 객체는 Prototype을 가짐
 
 const obj = {};
-
 console.log(obj);
 
 
