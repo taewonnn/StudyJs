@@ -12,7 +12,6 @@ console.log(obj);
 
 // Object - 모든 것의 조상
 // 아래 각 객체의 [[Prototype]]의 [[Prototype]]이 Object임 확인
-
 console.log(
   new String('')
 );
@@ -52,6 +51,7 @@ console.log(dog.name);
 
 const student = {};
 Object.defineProperties(student, {
+
   firstName: {
     value: '영희',
     writable: true,
@@ -64,6 +64,7 @@ Object.defineProperties(student, {
     enumerable: true,
     configurable: true,
   },
+
   fullName: {
     get() {
       return `${lastName} ${firstName}`;
@@ -74,6 +75,7 @@ Object.defineProperties(student, {
     configurable: true,
   },
 });
+
 console.log(student);
 
 
