@@ -58,6 +58,7 @@ Object.defineProperties(student, {
     enumerable: true,
     configurable: true,
   },
+
   lastName: {
     value: '김',
     writable: true,
