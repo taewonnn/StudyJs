@@ -49,6 +49,7 @@ function classIntro (classNo, teacher, ...children) {
   console.log('2.', arguments);
 
   let childrenStr = '';
+
   for (const child of children) {
     if (childrenStr) childrenStr += ', ';
     childrenStr += child;
