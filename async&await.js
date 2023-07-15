@@ -20,8 +20,6 @@ fetchFruits() //
   .then(fruits => console.log(fruits));
 
 
-
-
 function getMult10Promise (number) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
