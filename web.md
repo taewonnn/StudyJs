@@ -16,3 +16,13 @@ javascript 실행
 url에 입력한 값을 DNS 서버에 요청해서 ip 주소를 알아낸다
 ip주소 기반으로 http프로토콜 사용하여 요청 메시지 생성 및 서버로 전송
 서버에서 준 응답을 브라우저가 파싱해서 화면에 보여준다
+
+
+- CORS (cross origin resource sharing)
+cross origin
+기본적으로 same origin(동일 출처)을 따른다.
+
+cross-origin(요청을 보내는 주체와 받는 주체가 출처가 다른 경유)
+쉽게 말해 내가 직접 구글 백엔드에 요청하는 경우
+
+cross origin을 백엔드에서 허용할 ip를 따로 해주어야 한다.
