@@ -55,3 +55,9 @@ REST란, REpresentational State Transfer 의 약자이다. 여기에 ~ful 이라
 REST가 디자인 패턴이다, 아키텍처다 많은 이야기가 존재하는데, 하나의 아키텍처로 볼 수 있다.
 REST 는 Resource Oriented Architecture 이다. 
 API 설계의 중심에 자원(Resource)이 있고 HTTP Method 를 통해 자원을 처리하도록 설계하는 것이다.
+
+```html
+RESTful API는 웹 서비스와 애플리케이션 간에 데이터를 주고받기 위한 표준화된 방법입니다. 
+이를 통해 클라이언트는 HTTP 메서드(GET, POST, PUT, DELETE 등)를 사용하여 서버에 요청을 보내고, 서버는 클라이언트에 응답을 제공합니다. RESTful API는 URL을 통해 리소스(데이터)에 접근하고, JSON 또는 XML과 같은 형식으로 데이터를 전달합니다. 
+이러한 방식은 확장성과 유연성을 제공하며, 다양한 플랫폼과 언어에서 사용할 수 있습니다.
+```
