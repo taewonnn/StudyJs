@@ -16,6 +16,7 @@ document.querySelector('#button1')
 
 // 이벤트 리스너에서의 this
 // ♻️ 새로고침 후 실행
+
 document.querySelector('#button1')
   .addEventListener('click', function (e) {
     console.log(this);
@@ -51,6 +52,7 @@ $button2.addEventListener('mouseenter', () => {
 
 
 // 같은 이벤트에 대해 여러 핸들러 등록 가능
+
 $button2.addEventListener('mouseenter', () => {
   if (interval) clearInterval(interval);
 
