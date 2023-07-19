@@ -16,8 +16,7 @@ function Ar() {
 // strict mode에서는 undefined
 
 // obj안에서 사용할 경우 나를 포함하고 있는 obj
-//
-//
+
 // 화살표함수 안에서는 window
 //
 // constructor안에서는 새로 생성되는 obj를 뜻 한다
