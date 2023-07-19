@@ -6,7 +6,7 @@
 // 함수 호출하는 방식에 따라 다르다
 //
 // window
-//
+
 // function Ar() {
 //   console.log(this)
 // }
