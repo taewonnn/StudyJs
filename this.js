@@ -3,6 +3,25 @@
 // 기본적으로 자신이 속한 곳을 가리킴 - 문맥 context
 // 💡 함수의 호출 방식에 따라 가리키는 바가 달라짐 - 자바스크립트 특성
 
+// 함수 호출하는 방식에 따라 다르다
+//
+// window
+//
+// function Ar() {
+//   console.log(this)
+// }
+// window
+//
+//
+// strict mode에서는 undefined
+//
+// obj안에서 사용할 경우 나를 포함하고 있는 obj
+//
+//
+// 화살표함수 안에서는 window
+//
+// constructor안에서는 새로 생성되는 obj를 뜻 한다
+
 
 
 // 1. 전역에서의 this
