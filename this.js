@@ -7,13 +7,12 @@
 
 // window
 
-// function Ar() {
+function Ar() {
     console.log(this)
   }
 
 // window
-//
-//
+
 // strict mode에서는 undefined
 //
 // obj안에서 사용할 경우 나를 포함하고 있는 obj
