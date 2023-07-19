@@ -8,8 +8,9 @@
 // window
 
 // function Ar() {
-//   console.log(this)
-// }
+    console.log(this)
+  }
+
 // window
 //
 //
