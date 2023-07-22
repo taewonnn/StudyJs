@@ -1,6 +1,5 @@
 // trim
 
-
 // 앞 뒤 공백을 제거 해준다!
 const greeting = '   Hello world!   ';
 
