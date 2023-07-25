@@ -14,5 +14,6 @@ function runInDelay(callback, seconds) {
   if(!seconds || seconds < 0) {
     throw new Error('seconds는 0보다 커야 한다!')
   }
+
   setTimeout(callback, seconds * 1000);
 }
