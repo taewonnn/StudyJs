@@ -4,7 +4,6 @@
 function runInDelay(callback, seconds) {
 
   // callback이 존재하지 않을 때,
-
   if(!callback) {
     throw new Error('callback함수를 전달해주세요')
   }
