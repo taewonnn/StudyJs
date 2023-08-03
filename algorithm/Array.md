@@ -62,7 +62,7 @@ console.log(users); // [ 'Charles', 'Microft', 'Cecilia', 'Den' ] => 변경된 �
 
 splice(start, deleteCount, addItem)
 
-start부터 deleteCount개 삭제한다.
+start부터 delete Count개 삭제한다.
 addItem을 추가한다.
 원본 배열을 수정해서 반환한다.
 
