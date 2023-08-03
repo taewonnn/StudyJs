@@ -1,6 +1,5 @@
 // generator
 
-
 // const multiple = {
 //   [Symbol.iterator]: () => {
 //     const max = 10;
