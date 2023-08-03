@@ -196,5 +196,4 @@ reduce()의 첫번째 인자로 callback 안에서 callback 함수의 두번째 
 존재하면 해당 값을 삽입하지 않고 반환하는 방식으로 배열을 만들어 만들어진 최종 값을 반환합니다.
 
 const array = ['c', 'a', 'b', 'a', 'c']
-
 let result = array.reduce((ac, v) => ac.includes(v) ? ac : [...ac, v], []);
