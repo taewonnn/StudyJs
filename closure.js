@@ -42,10 +42,6 @@ const count = createCounter(10);
 
 
 
-
-
-
-
 const text = 'hello';
 function func() {
   console.log(text);
