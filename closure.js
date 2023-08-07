@@ -15,6 +15,7 @@ const logHello = func1();
 
 logHello();
 
+
 // logHello에는 func1 안의 함수인 func2가 반환되어 지정됨
 // func1의 실행이 끝났음에도 불구하고, 해당 스코프 내의 값이 살아 있음
 // func2와 func2가 선언된 환경(func1의 스코프)의 조합 - 클로저
