@@ -85,9 +85,11 @@ class Counter {
     }
   }
 
+
   get value() {
     return this.#value;
   }
+
 
   increment = () => {
     this.#value++;
