@@ -106,7 +106,6 @@ setTimeout(() => {
 
 
 // 재귀 함수
-
 function upto5 (x) {
   console.log(x);
   if (x < 5) {
@@ -122,7 +121,6 @@ upto5(7);
 
 
 // 불변성
-
 let x = 1;
 let y = {
   name: '홍길동',
