@@ -54,7 +54,6 @@ function add (x, y) {
 
 // 한 줄 안에 값만 반환시
 const mult = (x, y) => x * y;
-
 console.log(mult(2, 7));
 
 
