@@ -60,7 +60,6 @@ fetch(SERVER_URL + 'race-result')
   .catch(console.error);
 
 
-
 // 2. async / await
 const SERVER_URL = 'https://showcases.yalco.kr/javascript/mockserver/';
 
