@@ -16,7 +16,6 @@ document.querySelector('#button1')
 
 // 이벤트 리스너에서의 this
 // ♻️ 새로고침 후 실행
-
 document.querySelector('#button1')
   .addEventListener('click', function (e) {
     console.log(this);
