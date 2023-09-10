@@ -6,7 +6,6 @@ const global = 1;
   const local = 1;
 }
 
-
 function print() {
   // 함수 내부에서도 블럭안에서 필요한 경우에는
   // 필요한 곳에서! 블럭 안에서 변수를 선언하고 사용해야 함
