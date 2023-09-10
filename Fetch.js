@@ -54,10 +54,10 @@ fetch(SERVER_URL + "race-result")
   .catch(console.error);
 
 // 2. async / await
-const SERVER_URL = "https://showcases.yalco.kr/javascript/mockserver/";
+const SERVER_URL2 = "https://showcases.yalco.kr/javascript/mockserver/";
 
 async function getWinnersSchool() {
-  const raceResult = await fetch(SERVER_URL + "race-result").then((result) =>
+  const raceResult = await fetch(SERVER_URL2 + "race-result").then((result) =>
     result.json()
   );
 
