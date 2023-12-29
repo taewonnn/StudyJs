@@ -1,0 +1,256 @@
+        // Promise
+        // 동기 / 비동기
+
+        // js의 비동기성
+        const hello = fetch("http://google.com");
+
+        console.log("something");
+        console.log(hello);
+
+        // fetch를 제일 위에서 했지만, something이 먼저 찍히고, 그 다음에 fetch 못한다고 에러 뜸
+        // 순차적으로 실행이 아닌, 동시에 실행!
+        
+
+        // Promise - 비동기 작업이 맞이할 미래의 완료 또는 실패와 그 결과값을 나타낸다.
+        const amISexy = new Promise((resolve, reject) => {
+            // 수행한 비동기 작업이 성공한 경우 resolve(...)를 호출하고, 실패한 경우 reject(...)를 호출합니다.
+            
+            // setTimeout(() => {
+            //     resolve("Yes you are!");
+            // }, 3000);
+
+            // 위에 코드와 동알
+            // setTimeout(resolve, 3000, "Yes you are");
+
+            resolve("2");
+            // reject("You are ugly");
+        });
+
+
+        // then 과 catch는 각각 다른 상황에서 실행된다.(then이 실행된 후 catch가 실행되는 것이 아님!!)
+        // then - promise에서 resolve했을 때, then이 실행되면 catch는 실행되지 않는다!
+        // catch - promise에서 rejcet했을 때, catch가 실행되면 then은 실행되지 않는다!
+        amISexy
+        .then(result => {console.log(result)})
+        .catch(error => console.log(error));
+    </script>
+
+    <script>
+        const amISexyy = new Promise((resolve, rejcet) => {
+            resolve(2);
+        })
+
+        amISexyy.then(number => {
+            console.log(number * 2); // 4
+            // return을 안해주면 다음 then에서 otehrNumber가 undefined로 나옴
+            return number * 2;
+        }).then(otehrNumber => {
+            console.log(otehrNumber * 2);  // 8
+            return otehrNumber * 2;
+        });
+
+
+        // Ex
+        const tiemsTwo = (number) => number * 2;
+        amISexyy
+        .then(tiemsTwo)
+        .then(tiemsTwo)
+        .then(tiemsTwo)
+        .then(tiemsTwo)
+        .then(tiemsTwo)
+        .then(() => {
+            throw Error("Something is wrong");
+        })
+        .then(lastNumber => console.log(lastNumber))  // 위에 error때문에 여기까지 못 온다
+        .catch((error) => console.log(error));
+
+
+
+        // promise.all 
+        // 한 번에 여러 개의 값을 받아오기
+        // 주어진 모든 promise를 실행한 후 진행되는 하나의 promise를 반환
+        const p1 = new Promise((resolve) => {
+            setTimeout(resolve, 5000, "First");
+        });
+
+        const p2 = new Promise((resolve, reject) => {
+            setTimeout(resolve, 2000, "second");
+        });
+
+        const p3 = new Promise((resolve) => {
+            setTimeout(resolve, 1000, "third");
+        });
+
+        const motherPromise = Promise.all([p1, p2, p3]);
+
+        // setTimeout의 순서대로라면 third, second, frist순이지만, promise.all은 내가 요청한 순서대로 값을 제공한다!
+        // 모든 값을 얻을 때까지 promise.all이 기다렸다가 값을 제공!
+        // 콘솔 결과  ["First","second","third"]
+        motherPromise
+            .then((value) => console.log(value))
+            .catch((err) => console.log(err));
+
+
+        const p4 = new Promise((resolve, reject) => {
+            setTimeout(reject, 2000, "reject!!");
+        });
+
+        const motherPromise2 = Promise.all([p1, p4, p3]);
+
+        // reject가 있는 경우
+        // promise 중 하나라도 reject이면 결과도 reject
+        // 콘솔 결과 reject!!
+        motherPromise2
+            .then((value) => console.log(value))
+            .catch((err) => console.log(err));
+
+
+        // promise.race
+        // 가장 빠르게 resolve / reject되는 것으로!
+        const p5 = new Promise((resolve) => {
+            setTimeout(resolve, 5000, "five");
+        });
+
+        const p6 = new Promise((resolve, rejcet) => {
+            setTimeout(reject, 2000, "six");
+        });
+
+        const p7 = new Promise((resolve) => {
+            setTimeout(resolve, 1000, seven);
+        });
+
+        const motherPromise3 = Promise.race([p5, p6, p7]);
+
+        // 여러 promise(P5,p6,p7) 중 하나라도 resolve 되거나 reject되면 된다! 가장 빠른 것으로!
+        motherPromise3
+            .then((value) => conosle.log(value))
+            .catch((err) => console.log(err));
+
+
+
+        // Finally
+        // Promise가 끝난 다음 실행 resolve / reject는 상관없음
+        
+        const p8 = new Promise((resolve, rejcet) => {
+            setTimeout(resolve, 1000, "Eight");
+        })
+        .then((value) => console.log(value))
+        .catch((err) => console.log(err))
+        .finally(() => console.log("I'm done"))
+
+        // 콘솔 결과
+        // Eight
+        // I'm done
+
+
+        const p9 = new Promise((resolve, rejcet) => {
+            setTimeout(rejcet, 1000, "Nine");
+        })
+        .then((value) => console.log(value))
+        .catch((err) => console.log(`${err}❌`))
+        .finally(() => console.log("I'm done"))
+
+        // 콘솔 결과
+        // Nine❌
+        // I'm done
+
+
+        // fetch
+        fetch('https://google.com')
+        .then((res) => console.log(res))
+        .catch((e) => console.log(`${e}❌`));   // TypeError: Failed to fetch❌
+
+        fetch('https://yts.mx/api/v2/list_movies.json')
+        .then((res) => {
+            console.log(res)
+            return res.json();
+        })
+        .then((json) => console.log(json))
+        .catch((e) => console.log(`${e}❌`));
+
+
+        // async/await
+        // promise는 then 지옥에 빠진다.. promise를 사용하는 코드를 더 좋게 보이게 해주는 문법
+
+        // 기존 Promise 사용 방식
+        const getMoviesPromise = () => {
+        fetch("https://yts.mx/api/v2/list_movies.json")
+            .then((response) => {
+            console.log(response);
+            return response.json();
+            })
+            .then((potato) => console.log(potato))
+            .catch((e) => console.log(`✔${e}`));
+        };
+
+
+        // await은 혼자 사용 불가능 / async function 안에서만 사용 가능하다!
+        // await은 then을 대신한다 / promise가 끝나길 기다린다!
+
+        // 화살표함수 방식
+        const getMociesAsync = async () => {
+            // await -> promise가 끝나길 기다린다!
+            // resolve 한 값을 response에 넣어준다
+            const response = await fetch("https://yts.mx/api/v2/list_movies.json");
+            console.log(response);
+            // await -> promise가 끝나길 기다린다! then을 대신하는 역할
+            const json = await response.json();
+            console.log(json);
+            console.log('data 확인', json.data);
+        }
+        
+        getMociesAsync();
+
+
+        // 함수정의 방식
+        async function getMoviesAsync2 () {
+            const response = await fetch("https://yts.mx/api/v2/list_movies.json");
+            console.log(response);
+            const json = await response.json();
+            console.log(json);
+            console.log('data 확인', json.data);
+        }
+        getMoviesAsync2();
+
+        
+        // try catch finally 사용
+        const getMociesAsync2 = async () => {
+            try {
+                const response = await fetch("https://yts.mx/api/v2/list_movies.json");
+                console.log(response);
+                // await -> promise가 끝나길 기다린다! then을 대신하는 역할
+                const json = await response.json();
+                console.log(json);
+                console.log('data 확인', json.data);
+            } catch(e) { console.log(`❌${e}`)}
+            finally {
+                console.log('we are done!');
+            };
+        };
+        
+        getMociesAsync2();
+
+
+        // parallel
+    
+        const getMoviesAsync3 = async () => {
+            try {
+                const [moviesResponse, upcomingResponse] = await Promise.all([
+                fetch("https://yts.mx/api/v2/list_movies.json"),
+                fetch("https://yts.mx/api/v2/movie_suggestions.json?movie_id=100"),
+                ]);
+
+                const [movies, upcoming] = await Promise.all([
+                    moviesResponse.json(),
+                    upcomingResponse.json(),
+                ]);
+
+                console.log(movies, upcoming);
+            } catch (e) {
+                console.log(e);
+            } finally {
+                console.log("we are done");
+            }
+        };
+
+        getMoviesAsync3();
