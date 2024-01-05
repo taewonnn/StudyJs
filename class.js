@@ -19,6 +19,20 @@ console.log(chain2, chain2.introduce());
 console.log(chain3, chain3.introduce());
 
 
+class User {
+  constructor(name, age, email, password) {
+    this.name = name;
+    this.age = age;
+    this.email = email;
+    this.password = password;
+  }
+  sayHello() {
+    console.log(`Hello ${this.name}!!`)
+  }
+}
+
+const sexyUser = new User('daram', '31', 'daram@naver.com', '1234')
+console.log(sexyUser)
 
 
 // 💡 Syntactic Sugar - 문법을 보다 읽기 쉽게 만드는 것
