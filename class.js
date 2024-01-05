@@ -31,6 +31,12 @@ class User {
   }
 }
 
+
+class AdminUser extends User {
+  confirmAdmin() {
+    console.log('Admin!!');
+  }
+}
 const sexyUser = new User('daram', '31', 'daram@naver.com', '1234')
 console.log(sexyUser)
 
