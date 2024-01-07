@@ -31,6 +31,7 @@ class User {
   }
 }
 
+const sexyyUser = new User('taewon', '30', 'thisis@naver.com', '1235')
 
 class AdminUser extends User {
   confirmAdmin() {
