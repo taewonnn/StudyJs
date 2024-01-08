@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // object 지우거나 정리할 때 사용
+        const user = {
+            name: "nico",
+            age: 24,
+            password: 12345,
+        }
+
+        user["passowrd"] = null;
+
+        console.log(user);
+
+        const killPassword = ({password,...rest}) => rest;
+        const cleanUser = killPassword(user);
+        console.log(cleanUser);
+
+
+        // 기본값 설정
+        const user3 = {
+            name: "nico",
+            age: 24,
+            password: 12345,
+        }
+
+        const setCountry = ({country = "KR", ...rest}) => ({country, ...rest});
+
+        console.log(setCountry(user3));  // {country: 'KR', name: 'nico', age: 24, password: 12345}
+
+
+        // 속성명 바꾸기
+        const user1 = {
+            Nmae: "nico",
+            age: 24,
+            password: 12345,
+        }
+
+        const renmae = ({NAME: name, ...rest}) => ({name, ...rest});
+        console.log(renmae(user1));  // {name: undefined, Nmae: 'nico', age: 24, password: 12345}
+
+
+        // replaceAll()
+        // 본래 변수를 변화시키지 않는다! 새로운 string으로 리턴한다!
+
+        const name = 'Nicolaso';
+    
+        console.log(name.replaceAll('o','😀'));  // 'Nic😀las😀'
+        console.log(name); // 'Nicolaso'
+
+        
+
+
+        // loop
+
+        const friends = ["nico", "lynn", "ha", "hu", "Dal", "Mark", "Pipe", "Theo"];
+
+        // 기본 for문
+        for (let i = 0; i < friends.length; i++) {
+            console.log(`i love my friend ${friends[i]}`);
+        }
+        
+        // forEach - 배열에 있는 각각의 엘리먼트에 대한 특정한 액션을 실행
+        // forEach((value: string, index: number, array: string[]))
+        // loop를 멈출 수 없다!
+        const addHeart = (cur, i, a) => console.log(cur, i, a)
+        friends.forEach(addHeart)
+
+        // 같은 값을 리턴한다.
+        friends.forEach((f,i,a) => console.log(f,i,a));
+
+        // nico 0 (8) ['nico', 'lynn', 'ha', 'hu', 'Dal', 'Mark', 'Pipe', 'Theo']
+        // lynn 1 (8) ['nico', 'lynn', 'ha', 'hu', 'Dal', 'Mark', 'Pipe', 'Theo']
+        // ha 2 (8) ['nico', 'lynn', 'ha', 'hu', 'Dal', 'Mark', 'Pipe', 'Theo']
+        // hu 3 (8) ['nico', 'lynn', 'ha', 'hu', 'Dal', 'Mark', 'Pipe', 'Theo']
+        // Dal 4 (8) ['nico', 'lynn', 'ha', 'hu', 'Dal', 'Mark', 'Pipe', 'Theo']
+        // Mark 5 (8) ['nico', 'lynn', 'ha', 'hu', 'Dal', 'Mark', 'Pipe', 'Theo']
+        // Pipe 6 (8) ['nico', 'lynn', 'ha', 'hu', 'Dal', 'Mark', 'Pipe', 'Theo']
+        // Theo 7 (8) ['nico', 'lynn', 'ha', 'hu', 'Dal', 'Mark', 'Pipe', 'Theo']
+
+        // for of  -> array 뿐 아니라, iterable한 모든 것에서 동작한다.(Ex. string)
+        // loop를 멈출 수 있다.
+        for(const friend of friends) {
+            if(friend ===  'Dal') {
+                break;
+            } else {
+                console.log(friend);
+            }
+        };
+        
+        // nico
+        // lynn
+        // // ha
+        // hu
+
+        // string -> 문자/공백 각각 1개씩 반복
+        const abc = 'Hello this is very long';
+        for(const letter of abc) {
+            console.log(letter);
+        };
+        </script>
+</body>
+</html>
