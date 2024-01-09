@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbols</title>
+</head>
+<body>
+
+    <script>
+        // Set
+        //   중복제거
+        const sexySet = new Set([1, 2, 3, 4, 5, 6, 7, 7, 7, 7, 8]);
+        console.log(sexySet); // {1, 2, 3, 4, 5, 6, 7, 8}
+
+        sexySet.size // 8
+
+        sexySet.has(9) // false
+        sexySet.has(1) // true
+
+        sexySet.delete(1);
+        console.log(sexySet); // new Set([2, 3, 4, 5, 6, 7, 8]);
+
+        sexySet.clear(); // Set(0);
+
+        sexySet.add('hello'); // {'hello'}
+    </script>
+
+
+
+
+    <!-- ADN Tracker[DB 전환 완료형] start -->
+    <script type="text/javascript">
+        window.addEventListener('load', function() {
+            var across_adn_complete_contain = new fn_across_adn_contain();
+            var across_adn_complete_param = [];
+            across_adn_complete_param = {"ut":"Complete","ui":"102792","uo":"types1"};
+            across_adn_complete_contain.init(across_adn_complete_param);
+        });
+    </script>
+    <!-- ADN Tracker[DB 전환 완료형] end -->
+
+    <!-- ADN Tracker[장바구니] start -->
+    <script type="text/javascript">
+        window.addEventListener('load', function() {
+            try {
+                var adn_tmp_cart = [];
+                var adn_tmp_cart_items = document.querySelectorAll('장바구니 리스트 선택자');
+                for (let k = 0; k < adn_tmp_cart_items.length; k++) {
+                    var adn_tmp_idx = document.querySelectorAll('장바구니 상품번호')[k];
+                    var adn_tmp_q = document.querySelectorAll('장바구니 상품개수')[k];
+                    var adn_tmp_pr = document.querySelectorAll('장바구니 상품가격 * 장바구니 상품개수')[k];
+                    var adn_tmp_pn = document.querySelectorAll('장바구니 상품명')[k];
+                    adn_tmp_cart[k]={
+                        i:adn_tmp_idx,
+                        c:"",
+                        s:adn_tmp_pn,
+                        q:adn_tmp_q,
+                        p:adn_tmp_pr
+                    };
+                }
+                var across_adn_cart_contain = new fn_across_adn_contain();
+                var across_adn_cart_param = [];
+                across_adn_cart_param = {"ut":"Cart","ui":"입력", "items":adn_tmp_cart,"mall":"godomall"};
+                across_adn_cart_contain.init(across_adn_cart_param);	
+            } catch (e) {}
+        });
+    </script>
+    <!-- ADN Tracker[장바구니] end -->
+</body>
+</html>
+
+<script>
+    function solution(n) {
+    let answer = 0
+    for(let i=1;i<=n;i++){
+        if(n%i===0)
+            answer += i
+    }
+    return answer
+}
+</script>
