@@ -15,9 +15,6 @@ setTimeout(function() {}, 1000)
 // 1초 뒤에 실행해주세요!
 
 
-
-
-
 function first (param) {
   param()
 }
