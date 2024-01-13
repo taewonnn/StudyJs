@@ -18,7 +18,6 @@ function getNameAndChildren (node, indent) {
     '  '.repeat(indent), // 인덴트
     node.nodeName, // 노드 이름
 
-    // ⭐ 아래를 차례로 로깅해볼 것
     // node.children, // 이터러블임 확인
     // Object.getPrototypeOf(node),
   );
