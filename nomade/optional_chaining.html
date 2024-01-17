@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbols</title>
+</head>
+<body>
+
+    <script>
+        // optional chaining
+        const me = {
+            name: 'nico',
+            profile: {
+                email: '123@something.com'
+            }
+        }
+        console.log(me.profile.email); // 123@something.com
+
+        const lynn = {
+            name: 'nico',
+        }
+        
+        console.log(lynn.profile.email) // Eroor -> Cannot read properties of undefined (reading 'email')
+        
+        console.log(lynn?.profile?.email.provider?.name)  // undefined
+        // 위에 ?.한 것과 아래 같은 내용 아래는 너무 길어짐!
+        //  lynn && lynn.profile && lynn.profile.email && lynn.profile.email.provider && lynn.profile.emai.provider.name
+        
+        // => 어떤 Obj가 예상한 것을 가지고 있는지 아닌지 확신할 수 없을 떄 사용
+
+    </script>
+</body>
+</html>
