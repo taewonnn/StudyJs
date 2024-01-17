@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbols</title>
+</head>
+<body>
+
+    <script>
+        // trim
+        // 비어있는 공간을 없애준다.
+        // trimStart / trimEnd
+
+        console.log("               hello".trimStart()); // hello
+        console.log("hello                   ".trimEnd()); // hello
+        console.log("       nicolas serr     aree     ".trimStart().trimEnd()); // nicolas serr     aree
+        console.log("       nicolas serr     aree     ".trim()); // nicolas serr     aree
+
+        let name = "         n    "
+        console.log(name.trim()); // n  
+        console.log(name);  //          n   
+    </script>
+
+</body>
+</html>
