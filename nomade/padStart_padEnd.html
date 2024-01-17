@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbols</title>
+</head>
+<body>
+
+    <script>
+        // padStart / padEnd
+        // '문자열' 앞이나 뒤에 padding을 넣는다
+
+        let hours = 12; 
+        let minutes =3;
+        let seconds = 2;
+
+        console.log(`${hours}h:${minutes}m:${seconds}s`)  // 12h:3m:2s
+
+        // 12h:03m:02s  m/s 0붙여서 출력하고 싶을 때,
+        console.log(`${hours}h:${minutes < 10 ? `0${minutes}` : minutes}m:${seconds < 10 ? `0${seconds}` : seconds}s`)  // 12h:03m:02s
+
+
+        // => 간편
+        // padStart는 문자열에만 사용 가능하다.
+        // padStart('몇째 자리로 만들지 - 길이', '앞에 길이만큼 빈 칸이 있다면 어떤 문자를 채울지')
+        String(minutes).padStart(2, "0") // '03'
+        
+
+        test = '15'
+        console.log(test.padStart(2,"ttt")) // 15
+        console.log('5'.padStart(5 ,'x')); // xxxx5
+        console.log('5'.padEnd(10 ,'y')); // 5yyyyyyyyy
+        console.log('1'.padStart(2, '0').padEnd(3, 's'));   // 01s
+
+    </script>
+</body>
+</html>
