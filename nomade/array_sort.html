@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbols</title>
+</head>
+<body>
+
+    <script>
+        // Array sort
+        // sort -> 배열의 값 정렬 // ❗️배열에 변화를 준다.
+        
+        
+        const test = ['a', 'c', 'b']
+        console.log(test.sort());  // ['a', 'b', 'c']
+
+        const fruits = ['apple', 'strawberry','avocado',]
+        console.log(fruits.sort()); // ['apple', 'avocado', 'strawberry']
+
+        const sortFruitBylength = (fruitA, fruitB) => {
+            console.log(fruitA, fruitB);
+            return fruitB.length - fruitA.length
+        }
+
+        console.log(fruits.sort(sortFruitBylength)); // ['strawberry', 'avocado', 'apple']
+
+
+        const people = [
+            {
+                name: 'nico',
+                age: 12,
+            },
+            {
+                name: 'lynn',
+                age: 21,
+            },
+            {
+                name: 'taewon',
+                age: 9,
+            }
+        ];
+
+        const orderPeopleByAge = (peopleA, peopleB) => {
+            console.log(peopleA, peopleB)
+            return peopleA.age - peopleB.age
+        }
+
+        console.log(people.sort(orderPeopleByAge));
+
+        // 0: {name: 'taewon', age: 9}
+        // 1: {name: 'nico', age: 12}
+        // 2: {name: 'lynn', age: 21}
+
+    </script>
+</body>
+</html>
