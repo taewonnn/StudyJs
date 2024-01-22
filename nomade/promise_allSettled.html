@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbols</title>
+</head>
+<body>
+
+    <script>
+        // Promise.allSettled()
+        
+        const p = Promise.all([
+            fetch('https://yts.mx/api/v2/list_movies.json'),
+            fetch('https://yts.mx/api/v2/list_movies.json'),
+            fetch('https://yts.mx/api/v2/list_movies.json'),
+            fetch('https://yts.mx/api/v2/list_movies.json'),
+        ])
+        .then(response => console.log("Success! ",response)
+        .catch(e => console.log('error',e)))
+
+        // (4) [Response, Response, Response, Response]
+        
+        
+        // 모든 promise가 정상작동해야 하며, 하나라도 실패라면 Error
+        const p2 = Promise.all([
+            fetch('https://yts.mx/api/v2/list_movies.json'),
+            fetch(),
+            fetch('https://yts.mx/api/v2/list_movies.json'),
+            fetch('https://yts.mx/api/v2/list_movies.json'),
+        ])
+        .then(response => console.log("Success! ",response)
+        .catch(e => console.log('promise error :',e)))
+
+        // error
+
+
+        // allSettled -> 모든 fetch가 성공할 필요가 없음!
+        const p3 = Promise.allSettled([
+            fetch('https://yts.mx/api/v2/list_movies.json'),
+            fetch(),
+            fetch('https://yts.mx/api/v2/list_movies.json'),
+            fetch('https://yts.mx/api/v2/list_movies.json'),
+        ])
+        .then(response => console.log("Success! ",response)
+        .catch(e => console.log('promise error :',e)))
+
+        // Success!  (4) [{…}, {…}, {…}, {…}]
+
+    </script>
+</body>
+</html>
