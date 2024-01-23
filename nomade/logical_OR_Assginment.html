@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Logical Assginment Operators
+
+        // logical OR Assginment (||=)   => 변수가 falsy일 때(undefined, false, 빈 문자열, 0, null) 처리!
+        // logical AND Assginment (&&=)
+        // logical NULLISH Assginment (??=)
+
+        // logical OR Assginment
+        let name = prompt("what's your name");
+        
+        
+        // if(!name) {
+        //     name = 'anonnymous'
+        // }
+
+        // 위에 if문 대신 아래와 같이 간단하게!
+        name ||= 'anonnymous';
+
+        console.log(`Hello ${name}`); // 입력 안하면 -> Hello anonnymous
+        
+    </script>
+</body>
+</html>
