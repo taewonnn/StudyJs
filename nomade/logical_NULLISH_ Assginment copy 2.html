@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Logical Assginment Operators
+
+        // logical OR Assginment (||=)   => 변수가 falsy일 때(undefined, false, 빈 문자열, 0, null) 처리!
+        // logical AND Assginment (&&=)
+        // logical NULLISH Assginment (??=)
+
+
+        // logical NULLISH Assginment (??=)
+        // OR Assignment와 비슷하나, ❗️오직 undefined이거나 null 인 경우에만 수정
+
+        const user = {
+            usernmae: 'nico',
+            password : 1234,
+            isAdmin : false,
+        }
+
+        user.isAdmin ||= true; // isAdmin이 falsy(null / nundefined / fals / 0)일 때 값을 바꿔준다.
+        console.log(user);   // {usernmae: 'nico', password: 1234, isAdmin: true}  // 어드민 true
+
+
+        user.isAdmin ??= true; // isAdmin이 undefined / null일 때만 값을 바꿔준다.
+        console.log(user);   // {usernmae: 'nico', password: 1234, isAdmin: false}  isAdmin이 undefined나 null이 아닌 false이기에 안바뀜
+    </script>
+</body>
+</html>
