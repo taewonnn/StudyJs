@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Logical Assginment Operators
+
+        // logical OR Assginment (||=)   => 변수가 falsy일 때(undefined, false, 빈 문자열, 0, null) 처리!
+        // logical AND Assginment (&&=)
+        // logical NULLISH Assginment (??=)
+
+
+        // 복습
+        // logical OR Assginment (||=)
+        let x;
+
+        x ||= 1;
+        console.log(x); // 1
+
+
+        // logical AND Assginment (&&=
+        // 변수가 정의되어 있다면 변수를 수정하겠다(덮어쓰겠다)
+        let name = prompt("what's your name");
+        name
+
+        const user = {
+            username: 'nico',
+            password: 1234,
+        }
+
+        console.log(user); // {username: 'nico', password: 1234}
+
+        // password는 보호하고싶을 때,
+        if(user.password) {
+            user.password = "[secret]";
+        }
+        console.log(user);  // {username: 'nico', password: '[secret]'}
+
+        // => 간단하게   &&=
+        user.password &&= "[secret]";
+        console.log(user);  // {username: 'nico', password: '[secret]'}
+
+        user.name ||= 'nic';  // user의 name이 없다면 nic을 넣는다!
+        user.name &&= 'nic';  // user의 name의 값이 있다면 nic으로 변경한다! 하지만 user에 name이 없으니 재할당 불가
+    </script>
+</body>
+</html>
