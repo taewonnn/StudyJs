@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Error Cause
+        try {
+            2 + 2;
+            throw new Error('DB Connection Failed', {
+                cause: 'Password is incorrect'
+            })
+        } catch(e) {
+            console.log(e.message, e.cause);
+        }
+
+        // DB Connection Failed Password is incorrect
+
+
+
+        try {
+            2 + 2;
+            throw new Error('DB Connection Failed', {
+                cause: {
+                    error: 'Password is incorrect',
+                    value: 1234,
+                    message: ['too short', 'only Number not ok']
+                }
+            })
+        } catch(e) {
+            console.log(e.cause);
+        }
+
+        // {error: 'Password is incorrect', value: 1234, message: Array(2)}error: "Password is incorrect"message: (2) ['too short', 'only Number not ok']value: 1234[[Prototype]]: Object
+
+    </script>
+</body>
+</html>
