@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Object hasOwn();
+        // object가 property를 가지고 있는지 확인!
+        // Object.hasOwn('확인할 obj', '확인할 property');
+        
+        const user = {
+            name: 'nico',
+            age: 31,
+        };
+
+        // user가 isAdmin property를 가지고 있는지 확인
+        console.log(user.hasOwnProperty('isAdmin'));  // false
+
+
+        const user2 = {
+            name: 'nico',
+            age: 31,
+            isAdmin: 'hi',
+        };
+        
+        // user2가 isAdmin property를 가지고 있는지 확인
+        console.log(user2.hasOwnProperty('isAdmin'));   // true
+
+
+        // Object.hasOwn()
+        Object.hasOwn(user2, 'isAdmin')  // true
+
+        // 다른 방법
+        console.log("isAdmin" in user2);  // true
+
+    </script>
+</body>
+</html>
