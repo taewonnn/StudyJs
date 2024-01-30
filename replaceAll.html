@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // replaceAll
+        // rplaceAll('바꾸고싶은 것', '어떤 것으로 바꾸고 싶은지')
+        // 본래 변수를 변화시키지 않는다!
+
+        const name = 'Nicolas';
+        name.replaceAll('o','😀');
+
+        console.log(name.replaceAll('o','😀'));  // Nic😀las
+        console.log(name);  // Nicolas  // 본래 변수는 그대로!
+
+        
+        const name1 = 'taeownt'
+        const newName1 = name1.replaceAll('t', '🤣');
+        console.log(name1, newName1); // taeownt 🤣aeown🤣
+    </script>
+</body>
+</html>
