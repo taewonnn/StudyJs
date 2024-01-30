@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Promise any
+        // 가장 먼저 "성공적으로 이행"(fulfill)된 걸 반환
+        // ❗️ Promise.race와 차이점!! => 
+        // race는 결과를 중요하게 생각하지 않고 그저 빠르게 결과가 나온 것을 내보내고, any는 만약 가장 빠른게 실패라면 다른 프로미스 응답을 기다린다!!!
+        // reace는 첫 번째로 반환된 프로미스가 실패면 reject 반환 / any는 모든 프로미스가 실패했다는 에러 반환
+
+        // Promise.all -> p1,p2,p3가 모두 끝난 다음에 then으로 가서 진행
+        Promise.all([p1, p2, p3])
+        .then()
+
+        
+        
+        // Promise.any -> p1,p2,p3 중 어느 하나가 끝나기를 기다린다. 그 다음 then으로 가서 진행
+        // ex p2가 먼저 끝났다면 p1 p3을 기다리지 않고 그냥 then으로 진행
+        // p1, p2,p3 모두 끝나지 않았다면 aggreagte Eror
+
+        Promise.any([p1, p2, p3]).then();
+
+
+        const p1 = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve('quick')
+            }, 1000)
+        })
+
+
+        const p2 = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve('slow')
+            }, 5000)
+            // 한줄로 간단하게 가능
+            // setTimeout argument를 함수로 패스할 수 있도록 해준다.
+            // setTimeout(resolve, 5000, 'slow');
+        })
+
+        // Promise.all
+        Promise.all([p1, p2])
+        .then(console.log)  // (2) ['quick', 'slow']
+
+        // Promise.any
+        Promise.any([p1, p2])
+        .then(console.log)  // quick이 1초만에 바로 나옴 나머지는 신경쓰지 않는다!
+
+
+
+        const p3 = new Promise((resolve, reject) => {
+            setTimeout(reject, 1000, 'quick!');
+        })
+
+        const p4 = new Promise((resolve, reject) => {
+            setTimeout(reject, 5000, 'slow!');
+        })
+
+        // Promise.all
+        Promise.all([p3, p4])
+        .then(console.log)  // Uncaught (in promise) quick!  - 첫번쨰로 반환된 프로미스
+
+        // Promise.any
+        Promise.any([p3, p4])
+        .then(console.log)  // Uncaught (in promise) AggregateError: All promises were rejected
+
+    </script>
+</body>
+</html>
