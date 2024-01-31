@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Private Methods and Fields
+        // #을 붙여 Private으로 만들고 외부에서 사용 불가능하게 만들어준다.
+
+        // public
+        class Counter {
+            count = 0;
+            plus() {
+                this.count++;
+            }
+        }
+
+        const c = new Counter();
+        c.plus();
+        c.plus();
+        console.log(c)  // Counter {count: 2}
+        console.log(c.count); // 2
+
+
+        // private
+        class Counter2 {
+            // 이름 앞에 # -> private
+            #count = 0;
+            get count() {
+                return this.#count;
+            }
+            plus() {
+                if(this.#count === 5) {
+                    this.#reset();
+                } else {
+                    this.#count++;
+                }
+            }
+            #reset() {
+                this.#count = 0;
+            }
+        }
+
+        const d = new Counter2();
+        d.plus();
+        d.plus();
+        d.plus();
+        // d.#reset();  // private이라 외부에서 사용 불가
+        d.plus();
+        d.plus();
+        d.plus();
+        
+        console.log(d);  // Counter2 {#count: 0}
+        console.log(d.count);  // 0
+
+
+
+    </script>
+
+    <!-- ADN Tracker[DB 전환 완료형] start -->
+    <script type="text/javascript">
+        window.addEventListener('load', function() {
+            var across_adn_complete_contain = new fn_across_adn_contain();
+            var across_adn_complete_param = [];
+            across_adn_complete_param = {"ut":"Complete","ui":"102792","uo":"types1"};
+            across_adn_complete_contain.init(across_adn_complete_param);
+        });
+    </script>
+    <!-- ADN Tracker[DB 전환 완료형] end -->
+
+    <!-- ADN Tracker[장바구니] start -->
+    <script type="text/javascript">
+        window.addEventListener('load', function() {
+            try {
+                var adn_tmp_cart = [];
+                var adn_tmp_cart_items = document.querySelectorAll('장바구니 리스트 선택자');
+                for (let k = 0; k < adn_tmp_cart_items.length; k++) {
+                    var adn_tmp_idx = document.querySelectorAll('장바구니 상품번호')[k];
+                    var adn_tmp_q = document.querySelectorAll('장바구니 상품개수')[k];
+                    var adn_tmp_pr = document.querySelectorAll('장바구니 상품가격 * 장바구니 상품개수')[k];
+                    var adn_tmp_pn = document.querySelectorAll('장바구니 상품명')[k];
+                    adn_tmp_cart[k]={
+                        i:adn_tmp_idx,
+                        c:"",
+                        s:adn_tmp_pn,
+                        q:adn_tmp_q,
+                        p:adn_tmp_pr
+                    };
+                }
+                var across_adn_cart_contain = new fn_across_adn_contain();
+                var across_adn_cart_param = [];
+                across_adn_cart_param = {"ut":"Cart","ui":"입력", "items":adn_tmp_cart,"mall":"godomall"};
+                across_adn_cart_contain.init(across_adn_cart_param);	
+            } catch (e) {}
+        });
+    </script>
+    <!-- ADN Tracker[장바구니] end -->
+
+
+
+    <!-- ADN M바로가기 리마케팅 start -->
+    <script type="text/javascript">
+    var adn_quicklink_param = adn_quicklink_param || [];
+    adn_quicklink_param.push([{
+        ui:'102282',	
+        ci:'1022820001',
+        gi:'27482'
+    }]);
+    </script>
+    <script type="text/javascript"  src="//fin.rainbownine.net/js/adn_shortcut_remarketing_1.0.1.js"></script>
+    <!-- ADN M바로가기 리마케팅 설치 end -->
+    
+    <!-- ADN M바로가기 리마케팅 start -->
+    <script type="text/javascript">
+    var adn_quicklink_param = adn_quicklink_param || [];
+    adn_quicklink_param.push([{
+        ui:'102282',	
+        ci:'1022820001',
+        gi:'27482'
+    }]);
+    </script>
+    <script src="//fin.rainbownine.net/js/adn_shortcut_remarketing_1.0.1.js" charset="UTF-8"></script>
+    <!-- ADN M바로가기 리마케팅 설치 end -->
+</body>
+</html>
