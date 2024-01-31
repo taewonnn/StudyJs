@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Class Field Declarations
+        class Counter {
+            constructor () {
+                this.count = 0;
+            }
+            plus() {
+                this.count ++;
+            }
+        }
+
+        // 속성 초기화할 때 아래 처럼 그냥 바로 써도 무관
+        class Counter2 {
+            count = 0;
+            plus() {
+                this.count ++;
+            }
+        }
+
+        try {
+            2 + 2;
+            throw new Error('DB Connection Failed', {
+                cause: {
+                    error: 'Password is incorrect',
+                    value: 1234,
+                    message: ['too short', 'only Number not ok']
+                }
+            })
+        } catch(e) {
+            console.log(e.cause);
+        }
+    </script>
+</html>
