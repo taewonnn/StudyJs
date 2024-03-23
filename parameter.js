@@ -1,7 +1,5 @@
 // Parameter
-
 // 기본값 매개변수
-
 function add(a = 2, b = 4) {
   console.log(`${a} + ${b}`);
   return a + b;
