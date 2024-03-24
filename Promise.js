@@ -1,11 +1,12 @@
 // Promise
 
 // 오래걸리는 일을 조금 더 비동기적으로 처리할 수 있도록 도와줌
-
 // 내가 언제끝날지는 모르겠는데 일이 끝나면 알려줄게!
-// Promise = 이벤트가 끝났다는 것을 알려주는 object
 
+
+// Promise = 이벤트가 끝났다는 것을 알려주는 object
 // 연속적으로 비동기 코드를 써야 하는 경우
+
 // 위와 같이 콜백 함수 안에 또 다른 콜백 함수를 넣어야 하는 상황 발생 - 콜백 지옥
 // 횟수가 많을수록 가독성도 낮아지고 직관성이 떨어짐
 // 실전에서는 더더욱 복잡하고 난해해짐
@@ -25,7 +26,7 @@ runInDelay222(2)
 
 
 function runInDelay (seconds) {
-  return new Prmoise((resolve,reject) => {
+  return new Promise((resolve,reject) => {
     setTimeout( () => {
       if(!seconds || seconds < 0) {
         reject(new Error("seconds가 0보다 작음"))
