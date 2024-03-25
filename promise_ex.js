@@ -30,3 +30,10 @@ function relayRun (name, start, nextFunc, failMsg) {
     }
   }, time);
 }
+
+
+const dead = 1400;
+
+function relay() {
+  console.log('출발!')
+}
