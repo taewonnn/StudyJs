@@ -1,13 +1,14 @@
 # Promise
 
 
-```js
+
 // promise는 object임!! 비동기적으로 수행 한 것들이 성공적으로 끝났거나 실패했거나를 알려준다! 
 // 서버로 데이터 요청 코드 ~
 // 그 이후 데이터 관련해서 더하기 함수 실행 코드 ~
 
 // 3가지 상태가 있다
 
+```js
 function runInDelay(seconds) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -31,8 +32,6 @@ runInDelay(2)
   })
   .catch((error) => console.log(error))
   .finally(()=> console.log('끝났다!'))
-
-
 ```
 
 => 서버로 데이터를 받아올 때, 오래걸리거나 하면 함수가 실행이 안돼!
