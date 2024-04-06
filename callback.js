@@ -10,10 +10,8 @@ document.querySelector('.button').addEventListener('click', function () {
 // 버튼을 클릭했을 때, 이걸 실행해주세요!  - 순차적으로 실행
 
 
-
 setTimeout(function() {}, 1000)
 // 1초 뒤에 실행해주세요!
-
 
 function first (param) {
   param()
@@ -27,10 +25,6 @@ first(second)
 // function first () {
 //   second()
 // }
-
-
-
-
 
 
 
