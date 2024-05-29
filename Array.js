@@ -24,7 +24,7 @@ console.log(
 
 // includes - 인자로 주어진 요소 유무 확인
 
-const arr = [1, 2, 3, 'abc', true];
+const arr2 = [1, 2, 3, 'abc', true];
 
 console.log(
   arr.includes(2),
@@ -37,14 +37,14 @@ console.log(
 // push, unshift - 배열에 값을 추가
 
 // a. push - 값을 뒤에 추가
-const arr = [1, 2, 3];
-const x = arr.push(4);
+const arr3 = [1, 2, 3];
+const x1 = arr.push(4);
 
 console.log(x, arr);
 
 // b. unshift - 값을 앞에 추가
-const arr = [5, 6, 7];
-const x = arr.unshift(4);
+const arr4 = [5, 6, 7];
+const x5 = arr.unshift(4);
 
 console.log(x, arr);
 
@@ -61,19 +61,19 @@ console.log(x, arr);
 
 
 // pop - 값을 뒤에서 제거하여 반환
-const arr = [1, 2, 3, 4, 5];
-const x = arr.pop();
+const arr6 = [1, 2, 3, 4, 5];
+const x7 = arr.pop();
 
 console.log(x, arr);
 
-const y = arr.pop();
+const y8 = arr.pop();
 
 console.log(y, arr);
 
 
 
 // b. shift - 값을 앞에서 제거하여 반환
-const arr = [1, 2, 3, 4, 5];
+const arr9 = [1, 2, 3, 4, 5];
 const x = arr.shift();
 
 console.log(x, arr);
