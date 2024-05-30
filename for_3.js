@@ -10,7 +10,6 @@
 
 
 // 객체와 배열의 for문
-
 // 객체 - for in
 const lunch = {
   name: '라면',
@@ -22,7 +21,6 @@ const lunch = {
 for (const key in lunch) { // 💡 변할 것이 아니므로 const 사용
   console.log(key)
 }
-
 // name, taste, kilocalories, cold
 
 // key의 명칭은 자유롭게!!!
