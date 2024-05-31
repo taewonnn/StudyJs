@@ -6,7 +6,6 @@
 
 
 // click
-
 document.querySelector('#button1')
   .addEventListener('click', () => {
     alert('ㅇㅇ 어서오고');
