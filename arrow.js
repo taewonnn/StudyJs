@@ -8,6 +8,7 @@ const dog = {
     console.log('논다멍');
   },
 };
+
 dog.play();
 const obj = new dog.play(); // 💩
 console.log(obj);
