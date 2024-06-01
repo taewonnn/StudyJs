@@ -26,7 +26,6 @@ document.querySelector('#button1')
 
 // mouseenter, mouseleave 이벤트
 // 마우스 커서가 들어올/나갈 때
-
 const $button2 = document.querySelector('#button2');
 
 let timeout;
@@ -51,7 +50,6 @@ $button2.addEventListener('mouseenter', () => {
 
 
 // 같은 이벤트에 대해 여러 핸들러 등록 가능
-
 $button2.addEventListener('mouseenter', () => {
   if (interval) clearInterval(interval);
 
