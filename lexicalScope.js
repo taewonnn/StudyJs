@@ -5,9 +5,9 @@
 // 호출한 곳을 기준으로 하는 동적 스포크 dynamic scope 와 상반되는 개념
 
 
-const x = 1;
-const y = 1;
-const z = 1;
+const x1 = 1;
+const y2= 1;
+const z3= 1;
 
 function func1 () {
   const y = 2;
@@ -34,7 +34,6 @@ func1();
 
 
 // 렉시컬 환경 lexical environment
-
 // 전체 문서, 함수, 블록을 실행하기 전 만들어지는 내부 객체
 // 각 스코프의 고유 값들과 외부 스코프에 대한 참조를 포함
 
