@@ -9,9 +9,10 @@
     <script>
         // Promise any
         // 가장 먼저 "성공적으로 이행"(fulfill)된 걸 반환
+
         // ❗️ Promise.race와 차이점!! => 
         // race는 결과를 중요하게 생각하지 않고 그저 빠르게 결과가 나온 것을 내보내고, any는 만약 가장 빠른게 실패라면 다른 프로미스 응답을 기다린다!!!
-        // reace는 첫 번째로 반환된 프로미스가 실패면 reject 반환 / any는 모든 프로미스가 실패했다는 에러 반환
+        // race는 첫 번째로 반환된 프로미스가 실패면 reject 반환 / any는 모든 프로미스가 실패했다는 에러 반환
 
         // Promise.all -> p1,p2,p3가 모두 끝난 다음에 then으로 가서 진행
         Promise.all([p1, p2, p3])
