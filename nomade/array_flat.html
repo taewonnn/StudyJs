@@ -8,12 +8,12 @@
 <body>
 
     <script>
-        // Array flat
+        // Array -  flat
         // flat -> 아래 처럼 복잡한 배열이 가지고 있는 요소들을 모두 빼내준다.
         // flat() param에 숫자가 커질수록 더 많이 풀어준다.
         
         const flatTest = [1, [2, 2, [3, 3, [4, 4, [5, 5]]]]];
-        const test = [1, [2], [[8], [8], [ [ [8], [8], [ [6], [5], [3] ] ] ] ] ]
+        const test = [1, [2], [[8], [8], [ [ [8], [8], [ [6], [5], [3] ] ] ] ] ];
 
         test.flat() // [1, 2, Array(1), Array(1), Array(1)]
         test.flat(2) // [1, 2, 8, 8, Array(3)]
