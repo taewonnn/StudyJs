@@ -1,13 +1,9 @@
 // for문
 
-
-
 // 무한 루프
 // for (let i = 0; i <10; i++) {
 //   console.log(i--);
 // }
-
-
 
 // 객체와 배열의 for문
 // 객체 - for in
