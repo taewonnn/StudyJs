@@ -1,6 +1,7 @@
 {
   // Array
   const fruits: string[] = ['🍅', '🍌'];
+  const scroes1: number[] = [1, 3, 4];
   const scroes: Array<number> = [1, 3, 4];
   function printArray(fruits: readonly string[]) {}
 
