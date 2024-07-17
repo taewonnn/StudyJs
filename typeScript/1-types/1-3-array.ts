@@ -6,7 +6,7 @@
   // 변경 불가 fruits 배열은 변경 불가(추가포함)
   function printArray(fruits: readonly string[]) {}
 
-  // Tuple -> interface, type alias, class
+  // Tuple -> interface, type alias, class  - 서로다른 타입의 데이터를 담을 수 있음
   let student: [string, number];
   student = ['name', 123];
   student[0]; // name
