@@ -12,6 +12,7 @@
     work: () => void;
   };
 
+  
   function internWork(person: Student & Worker) {
     console.log(person.name, person.empolyeeId, person.work());
   }
