@@ -7,6 +7,7 @@ function print(message = 'hello') {
 }
 print('hello');
 
+
 function add(x: number, y: number): number {
   return x + y;
 }
