@@ -1,6 +1,7 @@
 /**
  * Type Inference
  */
+
 let text = 'hello';
 function print(message = 'hello') {
   console.log(message);
