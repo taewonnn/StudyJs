@@ -10,6 +10,7 @@
     result: 'fail';
     reason: string;
   };
+  
   type LoginState = SuccessState | FailState;
 
   function login(): LoginState {
@@ -20,6 +21,7 @@
       },
     };
   }
+
 
   // printLoginState(state: LoginState)
   // success -> 🎉 body
