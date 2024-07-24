@@ -12,6 +12,7 @@
   const wrong: any = 5;
   console.log((wrong as Array<number>).push(1)); // 😱
 
+  
   function findNumbers(): number[] | undefined {
     return undefined;
   }
