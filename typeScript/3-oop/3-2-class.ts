@@ -30,6 +30,7 @@
 
   const maker = new CoffeeMaker(32);
   console.log(maker);
+  
   const maker2 = new CoffeeMaker(14);
   console.log(maker2);
 
