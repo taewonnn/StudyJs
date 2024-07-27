@@ -7,6 +7,7 @@
   // public
   // private
   // protected
+  
   class CoffeeMaker {
     private static BEANS_GRAMM_PER_SHOT: number = 7; // class level
     private coffeeBeans: number = 0; // instance (object) level
