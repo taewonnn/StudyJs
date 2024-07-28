@@ -64,6 +64,7 @@
     }
   }
 
+  
   class AmateurUser {
     constructor(private machine: CoffeeMaker) {}
     makeCoffee() {
