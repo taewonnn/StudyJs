@@ -14,6 +14,21 @@ const result = replace(array, '🍓', '🥝');
 console.log(result);
 
 
+// prac
+const replaceFruits = (arr, from, to) => {
+  return arr.map((i) => {
+    console.log(i);
+    return i === from ? to : i;
+  })
+}
+
+
+
+const arr = ['🍌', '🍓', '🍇', '🍓']
+console.log('!!',replaceFruits(arr, '🍓', '🥝'))
+
+
+
 
 // 퀴즈2:
 // 배열과 특정한 요소를 전달받아,
