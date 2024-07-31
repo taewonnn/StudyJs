@@ -74,3 +74,5 @@ const result2 = nums
   .filter((num) => num > 5) //
   .reduce((avg, num) => avg + num / array.length, 0);
 console.log(result2);
+
+
