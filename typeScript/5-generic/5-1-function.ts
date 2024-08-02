@@ -6,6 +6,8 @@
     return arg;
   }
 
+
+  
   function checkNotNullAnyBad(arg: any | null): any {
     if (arg == null) {
       throw new Error('not valid number!');
