@@ -14,6 +14,8 @@ class SimpleEither<L, R> implements Either<L, R> {
     return this.rightValue;
   }
 }
+
+
 const either: Either<number, number> = new SimpleEither(4, 5);
 either.left(); // 4
 either.right(); //5
