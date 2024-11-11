@@ -28,16 +28,17 @@
   let person: null; // 사용X💩
   let person2: string | null; // 문자열 또는 null
 
-  // unknown 💩
-  let notSure: unknown = 0;
+  // unknown 사용X💩
+  let notSure: unknown = 0; // 무슨타입이 될 지 모름!
   notSure = 'he';
   notSure = true;
 
   // any 💩
-  let anything: any = 0;
+  let anything: any = 0; // 무엇이든 올 수 있다!
   anything = 'hello';
 
   // void
+  // 함수에서 아무것도 return하지 않을 떄 void
   function print(): void {
     console.log('hello');
     return;
@@ -45,9 +46,12 @@
   let unusable: void = undefined; // 사용X💩
 
   // never
+  // 에러 핸들링 -> 절대 return할게 업음
   function throwError(message: string): never {
     // message -> server (log)
     throw new Error(message);
+    
+    // 무한 반복
     while (true) {}
   }
   let neverEnding: never; // 사용X💩
