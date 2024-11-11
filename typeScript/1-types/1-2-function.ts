@@ -1,5 +1,5 @@
 {
-  // JavaScript 💩
+  // JS 💩
   function jsAdd(num1, num2) {
     return num1 + num2;
   }
@@ -30,7 +30,7 @@
   }
 
   // JavaScript ✨ => TypeScript
-  // Optional parameter
+  // Optional parameter -> ?붙은 lastName 파라미터는 전달 받을 수도 있고, 없을 수 도 있다!
   function printName(firstName: string, lastName?: string) {
     console.log(firstName);
     console.log(lastName); // undefined
