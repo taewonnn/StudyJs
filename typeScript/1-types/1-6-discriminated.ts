@@ -27,6 +27,7 @@
   // success -> 🎉 body
   // fail -> 😭 reason
   function printLoginState(state: LoginState) {
+    // state 안에 result를 공통적으로 가지고 있으니 해당 값으로 성공인지 실패인지 구분
     if (state.result === 'success') {
       console.log(`🎉 ${state.response.body}`);
     } else {
