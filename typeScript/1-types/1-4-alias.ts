@@ -22,6 +22,7 @@
   
   /**
    * String Literal Types
+   * tpye을 문자열로도 지정 가능!
    */
   type Name = 'name';
   let ellieName: Name;
