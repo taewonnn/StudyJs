@@ -33,6 +33,9 @@ export const caclulate = ({ command, a, b }: IMethod): number => {
 
     case 'remainder':
       return a % b;
+
+    default:
+      throw new Error('unknown error');
   }
 };
 
