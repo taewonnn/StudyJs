@@ -8,3 +8,32 @@ console.log(calculate('divide', 4, 2)); // 2
 console.log(calculate('remainder', 5, 2)); // 1
 
 
+
+=>
+
+interface IMethod {
+  command: 'add' | 'substract' | 'multiply' | 'divide' | 'remainder';
+  a: number;
+  b: number;
+}
+
+export const caclulate = ({ command, a, b }: IMethod): number => {
+  switch (command) {
+    case 'add':
+      return a + b;
+
+    case 'substract':
+      return a - b;
+
+    case 'multiply':
+      return a * b;
+
+    case 'divide':
+      return a / b;
+
+    case 'remainder':
+      return a % b;
+  }
+};
+
+
