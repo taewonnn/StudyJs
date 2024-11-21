@@ -1,4 +1,7 @@
 {
+
+  // class로 개선 
+  
   type CoffeeCup = {
     shots: number;
     hasMilk: boolean;
@@ -8,6 +11,7 @@
     static BEANS_GRAMM_PER_SHOT: number = 7; // class level
     coffeeBeans: number = 0; // instance (object) level
 
+    // 클래스를 이용해서 obj를 만들 떄 커피콩의 개수를 지정할 수 있게
     constructor(coffeeBeans: number) {
       this.coffeeBeans = coffeeBeans;
     }
