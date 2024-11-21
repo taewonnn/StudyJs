@@ -8,6 +8,7 @@
   let coffeeBeans: number = 0;
 
   function makeCoffee(shots: number): CoffeeCup {
+    // coffeeBeans가 shots보다 적을 때는 커피 못만드니 에러
     if (coffeeBeans < shots * BEANS_GRAMM_PER_SHOT) {
       throw new Error('Not enough coffee beans!');
     }
