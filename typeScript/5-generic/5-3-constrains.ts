@@ -1,7 +1,11 @@
+
+// constrains - 조건
+
 interface Employee {
   pay(): void;
 }
 
+// 정규직
 class FullTimeEmployee implements Employee {
   pay() {
     console.log(`full time!!`);
@@ -9,6 +13,7 @@ class FullTimeEmployee implements Employee {
   workFullTime() {}
 }
 
+// 비정규직
 class PartTimeEmployee implements Employee {
   pay() {
     console.log(`part time!!`);
@@ -22,6 +27,7 @@ function payBad(employee: Employee): Employee {
   return employee;
 }
 
+//Employee를 확장한 타입 extends
 function pay<T extends Employee>(employee: T): T {
   employee.pay();
   return employee;
@@ -29,6 +35,7 @@ function pay<T extends Employee>(employee: T): T {
 
 const ellie = new FullTimeEmployee();
 const bob = new PartTimeEmployee();
+
 ellie.workFullTime();
 bob.workPartTime();
 
