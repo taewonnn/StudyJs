@@ -8,7 +8,7 @@
   };
 
   class CoffeeMaker {
-    static BEANS_GRAMM_PER_SHOT: number = 7; // class level
+    static BEANS_GRAMM_PER_SHOT: number = 7; // class level  -> class와 연결이되어 있기떄문에 object마다 만들어지거나 생성되지 않음
     coffeeBeans: number = 0; // instance (object) level
 
     // 클래스를 이용해서 obj를 만들 떄 커피콩의 개수를 지정할 수 있게
