@@ -4,8 +4,12 @@
     hasMilk: boolean;
   };
 
+
+  // 정보 은닉 방식
+  // 따로 설정하지 않으면 public으로 설정됨
+  
   // public
-  // private
+  // private 
   // protected
   
   class CoffeeMaker {
@@ -38,6 +42,37 @@
       };
     }
   }
+
+
+  // getter / setter
+  // getter -> Class 내의 속성 값을 읽을 때 호출되는 메서드
+  class Example {
+  private _value: number = 0;
+  
+  get value(): number {
+    // 추가 동작 수행
+    return this._value;
+  }
+
+  const example = new Example();
+  console.log(expmple.value) // 0
+
+  
+  // Setter -> Class 내의 속성에 값을 할당할 때 호출되는 메서드
+  class Example {
+  private _value: number = 0;
+  
+    set value(newValue: number) {
+      // 추가 동작 수행
+      this._value = newValue
+    }
+  }
+
+  const example = new Example();
+  example.value = 42; // _value 속성에 42를 할당하고 추가 동작 수행.
+
+  
+  
 
   const maker = CoffeeMaker.makeMachine(32);
   maker.fillCoffeeBeans(32);
