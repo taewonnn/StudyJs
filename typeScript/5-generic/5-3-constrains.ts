@@ -59,3 +59,12 @@ console.log(getValue(obj2, 'animal')); // 🐕
 function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
   return obj[key];
 }
+
+const obj = {
+  name: 'taewon'
+  age: 20,
+};
+
+const obj2 = {
+  animal: '🦒',
+};
