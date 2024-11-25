@@ -20,12 +20,12 @@
 
 
 
-  // item이 어떤 type인지 모두 확인해주는 함수
+  // item이 어떤 type인지 모두 확인해주는 함수(any라 안전하지 않음)
   function checkNotNullAnyBad(arg: any | null): any {
     if (arg == null) {
       throw new Error('not valid number!');
     }
-    return arg;
+    return arg;₩
   }
   const result = checkNotNullAnyBad(123);
 
