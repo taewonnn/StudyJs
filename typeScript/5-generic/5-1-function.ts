@@ -25,10 +25,14 @@
     if (arg == null) {
       throw new Error('not valid number!');
     }
-    return arg;₩
+    return arg;
   }
   const result = checkNotNullAnyBad(123);
 
+
+
+  // genetic -> 통상적인 / 일반적인 
+  // 어떤 인자를 전달하든 Null이 아닌 경우는 모두 return
   function checkNotNull<T>(arg: T | null): T {
     if (arg == null) {
       throw new Error('not valid number!');
