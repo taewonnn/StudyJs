@@ -1,6 +1,5 @@
 
 // constrains - 조건
-
 interface Employee {
   pay(): void;
 }
