@@ -19,7 +19,7 @@
     z: 1,
   };
 
-  // class ★
+  // class에서 두개 다 모두 구현 가능 ★
   class Pos1 implements PositionType {
     x: number;
     y: number;
@@ -29,7 +29,8 @@
     y: number;
   }
 
-  // Extends
+  // Extends 
+  // 기존 interface에 z가 포함된 intercafe로 확장 가능
   interface ZPositionInterface extends PositionInterface {
     z: number;
   }
@@ -40,15 +41,17 @@
     z: number;
   }
 
+  // 타입은 중복 정의 불가능
   // type PositionType {
   // }
 
-  // 😆 Type aliases can use computed properties
+  // 😆 Type만 가능한 것 
+  // can use computed properties
   type Person = {
     name: string;
     age: number;
   };
-  type Name = Person['name']; // string
+  type Name = Person['name']; // string type이 가능
 
   type NumberType = number;
   type Direction = 'left' | 'right';
