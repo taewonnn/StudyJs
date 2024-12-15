@@ -16,6 +16,7 @@
       this.coffeeBeans = coffeeBeans;
     }
 
+    
     static makeMachine(coffeeBeans: number): CoffeeMaker {
       return new CoffeeMaker(coffeeBeans);
     }
