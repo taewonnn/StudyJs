@@ -1,6 +1,5 @@
 //  클로저 closure
 // 내부 함수에서 외부 함수의 값에 접근할 수 있다는 개념 함수 중첩시
-
 function func1() {
   const word = "Hello";
 

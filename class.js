@@ -10,6 +10,7 @@ class YalcoChicken {
   }
 }
 
+
 const chain1 = new YalcoChicken('판교', 3);
 const chain2 = new YalcoChicken('강남', 17);
 const chain3 = new YalcoChicken('제주', 24);
