@@ -7,6 +7,7 @@ console.log(first);
 console.log(second);
 console.log(others);
 
+
 const point = [1, 2];
 const [y, x, z = 0] = point;
 console.log(x);
@@ -16,6 +17,7 @@ console.log(z);
 function createEmoji() {
   return ['apple', '🍎'];
 }
+
 const [title, emoji] = createEmoji();
 console.log(title);
 console.log(emoji);
