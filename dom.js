@@ -7,6 +7,8 @@ console.log(
 );
 
 
+
+
 // document 내에 html 태그 요소를 선택하는 코드
 const html = document.querySelector('html');
 
