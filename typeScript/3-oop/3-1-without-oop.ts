@@ -4,6 +4,8 @@
     hasMilk: boolean;
   };
 
+
+  
   const BEANS_GRAMM_PER_SHOT: number = 7;
   let coffeeBeans: number = 0;
 
