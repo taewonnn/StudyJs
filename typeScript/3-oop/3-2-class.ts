@@ -1,11 +1,11 @@
 {
 
   // class로 개선 
-  
   type CoffeeCup = {
     shots: number;
     hasMilk: boolean;
   };
+
 
   class CoffeeMaker {
     static BEANS_GRAMM_PER_SHOT: number = 7; // class level  -> class와 연결이되어 있기떄문에 object마다 만들어지거나 생성되지 않음
