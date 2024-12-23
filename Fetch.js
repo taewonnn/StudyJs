@@ -29,6 +29,8 @@ fetch("https://showcases.yalco.kr/javascript/mockserver/race-result")
 // 2. 해당 주자의 상세정보 받아온 뒤 학교 코드 추출
 // 3. 해당 학교의 정보 받아오기
 
+
+
 // 1. promise
 const SERVER_URL = "https://showcases.yalco.kr/javascript/mockserver/";
 
