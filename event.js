@@ -11,8 +11,6 @@ document.querySelector('#button1')
     alert('ㅇㅇ 어서오고');
   });
 
-
-
 // 이벤트 리스너에서의 this
 // ♻️ 새로고침 후 실행
 document.querySelector('#button1')
