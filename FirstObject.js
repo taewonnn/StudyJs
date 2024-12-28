@@ -15,7 +15,6 @@ console.log(typeof addNumbers);
 // 다른 함수의 결과값으로서 반환될 수 있음
 
 // I. 할당
-
 function isOddNum(number) {
   console.log((number % 2 ? "홀" : "짝") + "수입니다.");
   return number % 2 ? true : false;
@@ -26,7 +25,6 @@ const checkIfOdd = isOddNum; // 뒤에 괄호 없음 유의
 console.log(checkIfOdd(23));
 
 // II. 인자로 전달
-
 // 함수가 다른 함수를 인자로 전달받음
 // 전달받는 함수 : 고차 함수 highter-order function
 // 전달되는 함수 : 콜백 함수 callback function
