@@ -1,14 +1,9 @@
 // for문
 
-
-
-
 // 반복문 빠져나오기
 
 // 대개는 반복문의 조건이 falsy가 되면 반복문이 종료됩니다.
 // 그런데 특별한 지시자인 break를 사용하면 언제든 원하는 때에 반복문을 빠져나올 수 있습니다.
-
-
 let sum = 0;
 
 while (true) {
@@ -43,8 +38,6 @@ for (let i = 0; i < 10; i++) {
 
 // for문 안에서 else return 안되는 이유
 // else return은 안됨!!!
-
-
 // for (let i = 0; i < nums.length; i++) {
 //   if (nums[i] === target) {
 //     return nums.indexOf(nums[i]);
