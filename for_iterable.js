@@ -7,6 +7,7 @@
 // 순회가 가능하면 무엇을 할 수 있나?
 // 바로! 빙글 빙글 도는 반복문, 연산자들을 사용할 수 있어.
 
+
 const array = [1, 2, 3];
 console.log(array.values());
 console.log(array.entries());
