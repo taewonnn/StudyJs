@@ -1,9 +1,14 @@
 {
+
+  // 기본 obj
   const obj = {
     name: 'ellie',
   };
+
   obj.name; // ellie
   obj['name']; // ellie
+
+
 
   type Animal = {
     name: string;
@@ -21,6 +26,7 @@
   type Keys = keyof Animal; // 'name' | 'age' | 'gender'
   const key: Keys = 'gender';
 
+  // Ex3
   type Person = {
     name: string;
     gender: Animal['gender']; // 'male' 또는 'female'
@@ -28,6 +34,6 @@
 
   const person: Person = {
     name: 'ellie',
-    gender: 'male',
+    gender: 'male', // 'male' 또는 'female'만 가능
   };
 }
