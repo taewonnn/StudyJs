@@ -12,7 +12,7 @@
   // Pick type 정의 - id / title만 쓸 때
   type VideoMetaData = Pick<Video , 'id' | 'title'>;
 
-  function getVideo (id: string):Video {
+  function getVideos (id: string):Video {
     return {
       id,
       title: 'video',
@@ -23,7 +23,7 @@
 
 
   // pick Ex1
-  function getVideoMetaData (id: string): Pick<Video, 'id'| 'title'> {
+  function getVideoMetaData11 (id: string): Pick<Video, 'id'| 'title'> {
     return {
       id : id, 
       title: 'title'
@@ -31,7 +31,7 @@
   }
 
    // pick Ex2
-  function getVideoMetaData2 (id: string): VideoMetaData {
+  function getVideoMetaData22 (id: string): VideoMetaData {
     return {
       id : id, 
       title: 'title'
