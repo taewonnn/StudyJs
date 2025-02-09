@@ -3,6 +3,7 @@
 
 const fruits = ['🍏', '🥝', '🍓', '🍌'];
 const [first, second, ...others] = fruits;
+
 console.log(first);
 console.log(second);
 console.log(others);
