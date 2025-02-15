@@ -4,6 +4,10 @@
 // output: [ '🍌', '🥝', '🍇', '🥝' ]
 
 
+function repl(array, from, to) {
+  return array.map((i)=> (i === from ? to: i))
+}
+
 function replace (array, from, to) {
   return array.map((i) => (i === from ? to: i))
 }
