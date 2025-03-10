@@ -24,14 +24,12 @@ const replaceFruits = (arr, from, to) => {
     console.log(i);
     return i === from ? to : i;
   })
-}
+} 
 
 
 
 const arr = ['🍌', '🍓', '🍇', '🍓']
 console.log('!!',replaceFruits(arr, '🍓', '🥝'))
-
-
 
 
 // 퀴즈2:
