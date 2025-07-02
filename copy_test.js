@@ -170,3 +170,11 @@ console.log('1. JSON 방법: 간단하지만 함수, Date, undefined, Symbol 등
 console.log('2. structuredClone: 완벽하지만 최신 환경에서만 지원');
 console.log('3. 직접 구현: 가장 세밀한 제어 가능, 하지만 복잡');
 console.log('4. 라이브러리 (lodash cloneDeep): 가장 안정적, 하지만 외부 의존성');
+
+
+
+
+// => 간단한 객체 → JSON.parse(JSON.stringify())
+// 복잡하거나 중요한 데이터 → lodash cloneDeep
+// 최신 환경 → structuredClone
+// 특수한 요구사항 → 직접 구현
